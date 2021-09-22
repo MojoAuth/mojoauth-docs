@@ -1,0 +1,52 @@
+header {
+  background-color: $white;
+  border-bottom: 1px solid $gray-light;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  @media (max-width: 767px) {
+    padding: 1.5rem 0;
+  }
+  & > div {
+    min-height: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    .logo {
+      @media (max-width: 767px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    & > div {
+      display: flex;
+      align-items: center;
+      & > a {
+        display: block;
+      }
+      .btn {
+        min-height: 44px;
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        li {
+          margin-right: 1rem;
+          &:last-child {
+            margin-right: 1.5rem;
+          }
+          a {
+            padding: 0 1rem;
+            color: $black;
+            &:hover {
+              color: $purple;
+            }
+          }
+        }
+      }
+    }
+  }
+}

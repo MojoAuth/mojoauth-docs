@@ -1,0 +1,146 @@
+.hero {
+  h1 {
+    margin-bottom: 24px;
+    font-size: 44px;
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media (min-width: 769px) {
+      padding-right: 40px;
+    }
+    span {
+      color: $purple;
+    }
+  }
+  .description {
+    margin-top: 1rem;
+    .subtitle {
+      margin-top: 48px;
+      label {
+        color: $purple;
+        font-size: 0.875rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .btn {
+    margin-top: 40px;
+  }
+  .vector {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.application-guide,
+.resources,
+.sdk {
+  .tag {
+    background-color: $yellow;
+    color: $gray-dark;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin-bottom: 24px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+}
+.resources,
+.sdk {
+  a,
+  a > span {
+    color: $purple;
+  }
+}
+.application-guide,
+.resources {
+  .card {
+    .icon {
+      border-radius: 12px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.pink {
+        background: url(../images/bg1.svg) no-repeat center center #fde7e8;
+        background-size: 80%;
+        @media (max-width: 536px) {
+          background-size: 60%;
+        }
+      }
+      &.yellow {
+        background: url(../images/bg2.svg) no-repeat center center #fff4dd;
+        background-size: 80%;
+        @media (max-width: 536px) {
+          background-size: 60%;
+        }
+      }
+      &.blue {
+        background: url(../images/bg3.svg) no-repeat center center #edf1ff;
+        background-size: 80%;
+        @media (max-width: 536px) {
+          background-size: 60%;
+        }
+      }
+      &.pink-big {
+        background: url(../images/bg6.svg) no-repeat center center #fde7e8;
+        background-size: 80%;
+        @media (max-width: 536px) {
+          background-size: cover;
+        }
+      }
+      &.blue-big {
+        background: url(../images/bg5.svg) no-repeat center center #edf1ff;
+        background-size: 80%;
+        @media (max-width: 536px) {
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+.sdk {
+  .card {
+    padding: 32px;
+    position: relative;
+    .title {
+      margin-bottom: 0;
+      margin-top: auto;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      color: $black;
+      height: 100%;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 12px;
+      }
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+}

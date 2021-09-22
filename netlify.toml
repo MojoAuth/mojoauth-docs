@@ -1,0 +1,3 @@
+[[redirects]]
+  from = "/docs/guides/webauthn/"
+  to = "/docs/guides/html-and-js/"
