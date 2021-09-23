@@ -82,6 +82,12 @@ const Middle = () => {
                   <span>JAVA</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/guides/php/">
+                  <img src="images/php.svg" width={20} />
+                  <span>PHP</span>
+                </Link>
+              </li>
             </ul> 
           </div>
 
