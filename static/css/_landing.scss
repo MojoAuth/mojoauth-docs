@@ -2,6 +2,7 @@
   h1 {
     margin-bottom: 24px;
     font-size: 44px;
+    font-weight: 500;
     @media (max-width: 768px) {
       font-size: 32px;
     }
@@ -48,14 +49,17 @@
 .sdk {
   .tag {
     background-color: $yellow;
-    color: $gray-dark;
-    border-radius: 12px;
-    padding: 0 12px;
-    margin-bottom: 24px;
-    display: flex;
+    color: $black;
+    min-height: 22px;
+    border-radius: 22px;
+    padding: 0 8px;
+    line-height: 22px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
-    align-items: center;
-    font-size: 0.85rem;
   }
 }
 .resources,
@@ -120,6 +124,7 @@
     .title {
       margin-bottom: 0;
       margin-top: auto;
+      font-size: 20px;
     }
     a {
       display: flex;
