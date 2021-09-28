@@ -73,6 +73,11 @@ input[type="button"] {
 .mb-0 {
   margin-bottom: 0 !important;
 }
+%space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .card {
   background-color: $white;
   border-radius: 12px;
@@ -85,12 +90,12 @@ input[type="button"] {
     border-color: $purple;
   }
   .icon {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     img,
     svg {
-      max-width: 67px;
-      max-height: 67px;
-      min-height: 67px;
+      max-width: 56px;
+      max-height: 56px;
+      min-height: 56px;
     }
   }
   .title {
@@ -168,10 +173,7 @@ input[type="button"] {
   font-weight: 400;
   font-size: 0.95rem;
 }
-header,
-footer {
-  overflow: hidden;
-}
+
 // container
 section,
 header,
@@ -238,13 +240,5 @@ pre[class*="language-"] {
   code[class*="language-"]::selection,
   code[class*="language-"] ::selection {
     background-color: $blue-dark;
-  }
-}
-
-// main tag
-main {
-  padding-top: 100px;
-  @media (max-width: 768px) {
-    padding-top: 224px;
   }
 }
