@@ -84,6 +84,11 @@ export default class Header extends Component {
                   </a>
                 </li>
                 <li>
+                  <a href="https://mojoauth.com/docs" className="active">
+                    Docs
+                  </a>
+                </li>
+                <li>
                   <a href="https://mojoauth.com/blog">Blog</a>
                 </li>
                 <li>

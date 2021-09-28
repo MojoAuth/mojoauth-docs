@@ -51,6 +51,9 @@ header {
             &:hover {
               color: $purple;
             }
+            &.active {
+              color: $purple;
+            }
           }
         }
         &.nav-links {
