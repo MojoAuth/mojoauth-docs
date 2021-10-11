@@ -77,10 +77,10 @@ export default class Header extends Component {
               <ul class="nav-links">
                 <li>
                   <a
-                    href="https://mojoauth.com/hactoberfest"
+                    href="https://mojoauth.com/hacktoberfest"
                     className="hactoberfest"
                   >
-                    Hactoberfest
+                    Hacktoberfest
                   </a>
                 </li>
                 <li>
