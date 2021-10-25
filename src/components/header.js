@@ -62,13 +62,13 @@ export default class Header extends Component {
             </label>
           </div>
           <div class="logo-mobile">
-            <Link to="/">
+            <Link to="https://mojoauth.com">
               <img src={Logo} width="117" />
             </Link>
           </div>
           <nav>
             <div className="logo">
-              <Link to="/">
+              <Link to="https://mojoauth.com">
                 <img src={Logo} width="117" />
               </Link>
             </div>
