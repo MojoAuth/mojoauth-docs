@@ -12,7 +12,7 @@ const Middle = () => {
               Getting started with the <span>MojoAuth</span>
             </h1>
             <div className="subtitle">
-              <label>Objective</label>
+              <label for="objective">Objective</label>
               <p>
                 Create a passwordless authetication system for any
                 organization, where they can use our APIs to provide seamless
@@ -21,6 +21,7 @@ const Middle = () => {
               <a
                 href="https://codesandbox.io/s/friendly-elion-56smy?file=/index.html"
                 target="_blank"
+                rel="noreferrer"
                 className="btn btn-primary"
               >
                 Try Out Now
@@ -28,7 +29,7 @@ const Middle = () => {
             </div>
           </div>
           <div className="vector">
-            <img src="images/hero-vector.png" />
+            <img alt="" src="images/hero-vector.png" />
           </div>
         </div>
       </section>
@@ -40,19 +41,19 @@ const Middle = () => {
         <div className="grid-25">
           <div className="card">
             <div className="icon yellow">
-              <img src="images/sso.svg" />
+              <img alt="" src="images/sso.svg" />
             </div>
             <h3 className="title">Single Page App</h3>
             <ul>
               <li>
                 <Link to="/guides/html-and-js/">
-                  <img src="images/html5.svg" width={20} />
+                  <img alt="" src="images/html5.svg" width={20} />
                   <span>HTML and JS</span>
                 </Link>
               </li>
               <li>
                 <Link to="/guides/react/">
-                  <img src="images/react.png" width={20} />
+                  <img alt="" src="images/react.png" width={20} />
                   <span>React App</span>
                 </Link>
               </li>
@@ -60,31 +61,31 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon pink">
-              <img src="images/web-apps.svg" />
+              <img alt="" src="images/web-apps.svg" />
             </div>
             <h3 className="title">Web Apps</h3>
              <ul>
               <li>
                 <Link to="/guides/nodejs/">
-                  <img src="images/node-dot-js.svg" width={20} />
+                  <img alt="" src="images/node-dot-js.svg" width={20} />
                   <span>NodeJS</span>
                 </Link>
               </li>
               <li>
                 <Link to="/guides/golang/">
-                  <img src="images/go.svg" width={20} />
+                  <img alt="" src="images/go.svg" width={20} />
                   <span>Golang</span>
                 </Link>
               </li>
               <li>
                 <Link to="/guides/java/">
-                  <img src="images/java.png" width={20} />
+                  <img alt="" src="images/java.png" width={20} />
                   <span>JAVA</span>
                 </Link>
               </li>
               <li>
                 <Link to="/guides/php/">
-                  <img src="images/php.svg" width={20} />
+                  <img alt="" src="images/php.svg" width={20} />
                   <span>PHP</span>
                 </Link>
               </li>
@@ -93,13 +94,13 @@ const Middle = () => {
 
           <div className="card">
             <div className="icon blue">
-              <img src="images/mobile-app.svg" />
+              <img alt="" src="images/mobile-app.svg" />
             </div>
             <h3 className="title">Mobile Apps</h3>
              <ul>
               <li>
                 <Link to="/guides/android/">
-                  <img src="images/android.svg" width={20} />
+                  <img alt="" src="images/android.svg" width={20} />
                   <span>Android</span>
                 </Link>
               </li>
@@ -107,25 +108,25 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon pink">
-              <img src="images/cms-app.svg" />
+              <img alt="" src="images/cms-app.svg" />
             </div>
             <h3 className="title">Integrations</h3>
              <ul>
               <li>
                 <Link to="/integrations/bubble/">
-                  <img src="images/bubble.png" width={20} />
+                  <img alt="" src="images/bubble.png" width={20} />
                   <span>Bubble.io</span>
                 </Link>
               </li>
               <li>
                 <Link to="/integrations/webflow/">
-                  <img src="images/webflow.png" width={20} />
+                  <img alt="" src="images/webflow.png" width={20} />
                   <span>Webflow</span>
                 </Link>
               </li>
               <li>
                 <Link to="/integrations/wordpress/">
-                  <img src="images/wordpress.png" width={20} />
+                  <img alt="" src="images/wordpress.png" width={20} />
                   <span>Wordpress</span>
                 </Link>
               </li>
@@ -142,7 +143,7 @@ const Middle = () => {
         <div className="grid-50">
           <div className="card">
             <div className="icon blue-big">
-              <img src="images/configuration.svg" />
+              <img alt="" src="images/configuration.svg" />
             </div>
             <h3 className="title">Configuration & Branding Personalization</h3>
             {/* <p>
@@ -153,13 +154,13 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon pink-big">
-              <img src="images/other-resources.svg" />
+              <img alt="" src="images/other-resources.svg" />
             </div>
             <h3 className="title">How To</h3>
             <ul>
               <li>
                 <Link to="/resources/jwt-token/">
-                  <img src="images/access-token.png" width={20} />
+                  <img alt="" src="images/access-token.png" width={20} />
                   <span>Handle MojoAuth Token</span>
                 </Link>
               </li>
@@ -176,7 +177,7 @@ const Middle = () => {
           <div className="card">
             <Link to="/sdks/nodejs/">
             <div className="icon">
-              <img src="images/node-dot-js.svg" />
+              <img alt="" src="images/node-dot-js.svg" />
             </div>
             <h3 className="title">NodeJS</h3>
             </Link>
@@ -184,7 +185,7 @@ const Middle = () => {
           <div className="card">
            <Link to="/sdks/golang/">
             <div className="icon">
-              <img src="images/go.svg" />
+              <img alt="" src="images/go.svg" />
             </div>
             <h3 className="title">
               <span>Golang</span>
@@ -194,7 +195,7 @@ const Middle = () => {
           <div className="card">
              <Link to="/sdks/java/">
             <div className="icon">
-              <img src="images/java.svg" />
+              <img alt="" src="images/java.svg" />
             </div>
             <h3 className="title">Java</h3>
             </Link>
@@ -202,7 +203,7 @@ const Middle = () => {
           <div className="card">
            <Link to="/sdks/android/">
             <div className="icon">
-              <img src="images/android.svg" />
+              <img alt="" src="images/android.svg" />
             </div>
             <h3 className="title">
               <span>Android</span>
@@ -211,35 +212,35 @@ const Middle = () => {
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/python.svg" />
+              <img alt="" src="images/python.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">Python</h3>
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/php.svg" />
+              <img alt="" src="images/php.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">PHP</h3>
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/ruby.svg" />
+              <img alt="" src="images/ruby.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">Ruby</h3>
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/visualstudio.svg" />
+              <img alt="" src="images/visualstudio.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">Asp.net</h3>
           </div>
           <div className="card">
             <div className="icon">
-              <img src="images/ios.svg" />
+              <img alt="" src="images/ios.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">IOS</h3>

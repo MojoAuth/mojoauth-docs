@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 const Footer = () => {
   return (
     <footer class="footer">
@@ -11,6 +10,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/mojoauth"
                 target="_blank"
+                rel="noreferrer"
               >
                 <svg
                   enable-background="new 0 0 56.693 56.693"
@@ -29,7 +29,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/mojoauth" target="_blank">
+              <a href="https://twitter.com/mojoauth" target="_blank" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="ionicon"
@@ -46,7 +46,7 @@ const Footer = () => {
           <div class="link">
             <ul>
               <li>
-                <a target="_blank" href="https://mojoauth.com/docs">
+                <a target="_blank" rel="noreferrer" href="https://mojoauth.com/docs">
                   Docs{" "}
                 </a>
               </li>

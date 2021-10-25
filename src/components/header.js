@@ -62,14 +62,14 @@ export default class Header extends Component {
             </label>
           </div>
           <div class="logo-mobile">
-            <Link to="https://mojoauth.com">
-              <img src={Logo} width="117" />
+            <Link to="https://mojoauth.com/">
+              <img alt="" src={Logo} width="117" />
             </Link>
           </div>
           <nav>
             <div className="logo">
-              <Link to="https://mojoauth.com">
-                <img src={Logo} width="117" />
+              <Link to="https://mojoauth.com/">
+                <img alt="" src={Logo} width="117" />
               </Link>
             </div>
 
@@ -109,6 +109,7 @@ export default class Header extends Component {
                   <a
                     href="https://mojoauth.com/signin"
                     target="_blank"
+                    rel="noreferrer"
                     className="btn btn-primary btn-sm"
                   >
                     Sign up Free
