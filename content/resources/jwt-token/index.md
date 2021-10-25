@@ -7,7 +7,7 @@ description: "A quick implementation guide to handle mojoauth token."
 
 ## MojoAuth Access Token
 
-After successful authentication, MojoAuth provides a JWT Token that is signed using symmetric signing method RS256 with your own Secret Key. You can use this token for your further implementation. MojoAuth also provides the way you can verify the authenticity of this token.
+After successful authentication, MojoAuth provides a JWT Token that is signed using asymmetric signing method RS256 with your own Secret Key. You can use this token for your further implementation. MojoAuth also provides the way you can verify the authenticity of this token.
 
 ## How to Verify Token
 
