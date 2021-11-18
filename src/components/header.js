@@ -76,14 +76,6 @@ export default class Header extends Component {
             <div className="nav-right">
               <ul class="nav-links">
                 <li>
-                  <a
-                    href="https://mojoauth.com/hacktoberfest"
-                    className="hactoberfest"
-                  >
-                    Hacktoberfest
-                  </a>
-                </li>
-                <li>
                   <a href="https://mojoauth.com/docs" className="active">
                     Docs
                   </a>
