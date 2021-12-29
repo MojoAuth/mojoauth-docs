@@ -150,7 +150,21 @@ const Middle = () => {
               Lorem Ipsum is simply dummy text of the printing and type
               setting industry.
               </p> */}
-            <div className="tag">Coming Soon</div>
+            {/* <div className="tag">Coming Soon</div> */}
+            <ul>
+              <li>
+                <Link to="/configurations/localization/">
+                  <img alt="" src="images/localization.png" width={20} />
+                  <span>Localization</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/configurations/redirection/">
+                  <img alt="" src="images/redirection.png" width={20} />
+                  <span>Handle Redirection</span>
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="card">
             <div className="icon pink-big">
