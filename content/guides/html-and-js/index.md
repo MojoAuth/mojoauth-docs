@@ -149,7 +149,7 @@ After completing the above steps the following will be the flow of passwordless 
 ```js
 const mojoauth = new MojoAuth( "<<Your APIKEY>>" );
 
-    mojoauth.signInWithCredential().then( payload => {console.log(payload)}
+    mojoauth.signInWithStateID().then( payload => {console.log(payload)}
 ```
 
 ## Enabling WebAuthn for logged-in user
