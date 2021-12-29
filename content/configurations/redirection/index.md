@@ -19,14 +19,21 @@ To achieve this use case, add the URL to your project’s setting as displayed i
 
 Pass one `redirect_url` param in the script where you create the instance of MojoAuth for login/signup.
 
-```
-const mojoauth = new MojoAuth("<Your MojoAuth API Key>",{language: "it", redirect_url:"localhost:5000"});
+```js
+const mojoauth = new MojoAuth("<Your MojoAuth API Key>", {
+  language: "it",
+  redirect_url: "localhost:5000",
+})
 ```
 
 Add the below code where you want to handle the redirection.
 
-```
-const mojoauth = new MojoAuth( "<<Your APIKEY>>" ); mojoauth.signInWithStateID().then( payload => {console.log(payload)}
+```js
+const mojoauth = new MojoAuth( "<<Your APIKEY>>" );
+ mojoauth.signInWithStateID()
+ .then( payload => {
+     console.log(payload)
+     }
 ```
 
 ## Using MojoAuth APIs
@@ -37,22 +44,22 @@ To get the verification status, use our status API. [Status API]() will return t
 
 ## sample JWT Token Response
 
-```
+```json
 {
-    "authenticated": true,
-    "oauth": {
-        "access_token": "eyJhbGciOi.....",
-        "id_token": "eyJhbGciOiJ......",
-        "refresh_token": "ad0****7-a134-4**e-9a76-9******a",
-        "expires_in": "2021-12-28T12:30:30.016737094Z",
-        "token_type": "Bearer"
-    },
-    "user": {
-        "created_at": "2021-12-28T12:30:30.016736828Z",
-        "updated_at": "2021-12-28T12:30:30.016736938Z",
-        "issuer": "https://www.mojoauth.com",
-        "user_id": "61******65332",
-        "identifier": "example@example.com"
-    }
+  "authenticated": true,
+  "oauth": {
+    "access_token": "eyJhbGciOi.....",
+    "id_token": "eyJhbGciOiJ......",
+    "refresh_token": "ad0****7-a134-4**e-9a76-9******a",
+    "expires_in": "2021-12-28T12:30:30.016737094Z",
+    "token_type": "Bearer"
+  },
+  "user": {
+    "created_at": "2021-12-28T12:30:30.016736828Z",
+    "updated_at": "2021-12-28T12:30:30.016736938Z",
+    "issuer": "https://www.mojoauth.com",
+    "user_id": "61******65332",
+    "identifier": "example@example.com"
+  }
 }
 ```
