@@ -18,7 +18,8 @@ const Middle = () => {
                 organization, where they can use our APIs to provide seamless
                 auth experiences and reduce security risks for their customer.
               </p>
-              <a
+              <div className="d-flex">
+              <a style={{marginRight:'20px'}}
                 href="https://codesandbox.io/s/friendly-elion-56smy?file=/index.html"
                 target="_blank"
                 rel="noreferrer"
@@ -26,6 +27,17 @@ const Middle = () => {
               >
                 Try Out Now
               </a>
+              <a
+                href="https://mojoauth.com/docs/api/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-secondary"
+              >
+                API References   
+                <img style={{marginLeft:'10px'}} alt="" src="images/new-tab.png" width={20} />
+              </a>
+              
+              </div>
             </div>
           </div>
           <div className="vector">
@@ -176,6 +188,12 @@ const Middle = () => {
                 <Link to="/resources/jwt-token/">
                   <img alt="" src="images/access-token.png" width={20} />
                   <span>Handle MojoAuth Token</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/api/">
+                  <img alt="" src="images/api.png" width={20} />
+                  <span>Implement MojoAuth with API</span>
                 </Link>
               </li>
             </ul>
