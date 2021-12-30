@@ -14,29 +14,42 @@ const Middle = () => {
             <div className="subtitle">
               <label for="objective">Objective</label>
               <p>
-                Create a passwordless authetication system for any
-                organization, where they can use our APIs to provide seamless
-                auth experiences and reduce security risks for their customer.
+                Create a passwordless authetication system for any organization,
+                where they can use our APIs to provide seamless auth experiences
+                and reduce security risks for their customer.
               </p>
               <div className="d-flex">
-              <a style={{marginRight:'20px'}}
-                href="https://codesandbox.io/s/friendly-elion-56smy?file=/index.html"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-primary"
-              >
-                Try Out Now
-              </a>
-              <a
-                href="https://mojoauth.com/docs/api/"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-secondary"
-              >
-                API References   
-                <img style={{marginLeft:'10px'}} alt="" src="images/new-tab.png" width={20} />
-              </a>
-              
+                <a
+                  style={{ marginRight: "20px" }}
+                  href="https://codesandbox.io/s/friendly-elion-56smy?file=/index.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-primary"
+                >
+                  Try Out Now
+                </a>
+                <a
+                  href="https://mojoauth.com/docs/api/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-secondary"
+                >
+                  API References
+                  <svg
+                    id="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                  >
+                    <polygon points="10 6 10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6"></polygon>
+                    <rect
+                      id="_Transparent_Rectangle_"
+                      data-name="<Transparent Rectangle>"
+                      fill="none"
+                      width="32"
+                      height="32"
+                    ></rect>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -76,7 +89,7 @@ const Middle = () => {
               <img alt="" src="images/web-apps.svg" />
             </div>
             <h3 className="title">Web Apps</h3>
-             <ul>
+            <ul>
               <li>
                 <Link to="/guides/nodejs/">
                   <img alt="" src="images/node-dot-js.svg" width={20} />
@@ -101,7 +114,7 @@ const Middle = () => {
                   <span>PHP</span>
                 </Link>
               </li>
-            </ul> 
+            </ul>
           </div>
 
           <div className="card">
@@ -109,7 +122,7 @@ const Middle = () => {
               <img alt="" src="images/mobile-app.svg" />
             </div>
             <h3 className="title">Mobile Apps</h3>
-             <ul>
+            <ul>
               <li>
                 <Link to="/guides/android/">
                   <img alt="" src="images/android.svg" width={20} />
@@ -123,7 +136,7 @@ const Middle = () => {
               <img alt="" src="images/cms-app.svg" />
             </div>
             <h3 className="title">Integrations</h3>
-             <ul>
+            <ul>
               <li>
                 <Link to="/integrations/bubble/">
                   <img alt="" src="images/bubble.png" width={20} />
@@ -208,39 +221,39 @@ const Middle = () => {
         <div className="grid-25">
           <div className="card">
             <Link to="/sdks/nodejs/">
-            <div className="icon">
-              <img alt="" src="images/node-dot-js.svg" />
-            </div>
-            <h3 className="title">NodeJS</h3>
+              <div className="icon">
+                <img alt="" src="images/node-dot-js.svg" />
+              </div>
+              <h3 className="title">NodeJS</h3>
             </Link>
           </div>
           <div className="card">
-           <Link to="/sdks/golang/">
-            <div className="icon">
-              <img alt="" src="images/go.svg" />
-            </div>
-            <h3 className="title">
-              <span>Golang</span>
-            </h3>
-             </Link>
-          </div>
-          <div className="card">
-             <Link to="/sdks/java/">
-            <div className="icon">
-              <img alt="" src="images/java.svg" />
-            </div>
-            <h3 className="title">Java</h3>
+            <Link to="/sdks/golang/">
+              <div className="icon">
+                <img alt="" src="images/go.svg" />
+              </div>
+              <h3 className="title">
+                <span>Golang</span>
+              </h3>
             </Link>
           </div>
           <div className="card">
-           <Link to="/sdks/android/">
-            <div className="icon">
-              <img alt="" src="images/android.svg" />
-            </div>
-            <h3 className="title">
-              <span>Android</span>
-            </h3>
-             </Link>
+            <Link to="/sdks/java/">
+              <div className="icon">
+                <img alt="" src="images/java.svg" />
+              </div>
+              <h3 className="title">Java</h3>
+            </Link>
+          </div>
+          <div className="card">
+            <Link to="/sdks/android/">
+              <div className="icon">
+                <img alt="" src="images/android.svg" />
+              </div>
+              <h3 className="title">
+                <span>Android</span>
+              </h3>
+            </Link>
           </div>
           <div className="card">
             <div className="icon">
@@ -277,7 +290,6 @@ const Middle = () => {
             <div className="tag">Coming Soon</div>
             <h3 className="title">IOS</h3>
           </div>
-          
         </div>
       </section>
     </main>
