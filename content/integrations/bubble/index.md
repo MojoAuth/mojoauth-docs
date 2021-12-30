@@ -48,10 +48,12 @@ The integration uses two pages, the Login page, and the Members-only(protected) 
 </div>
 <br/>
 
-- Now navigate to the Plugins tab, click Mojoauth Login, and enter the MojoAuth API Key as displayed in the below screen.
+- Now navigate to the Plugins tab, click Mojoauth Login, and enter the MojoAuth API Key and language as displayed in the below screen.
+
+For language codes, you can check the [localization doc](https://mojoauth.com/docs/configurations/localization/)
 
 <div style="text-align:center">
-  <img src="/images/Enter-ApiKey.png" alt="Api Key ID" />
+  <img src="/images/Enter-API-Key.png" alt="Api Key ID" />
 </div>
 <br/>
 
