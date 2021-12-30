@@ -41,12 +41,14 @@
   }
   &.btn-secondary {
     color: $purple;
+    border: 1px solid $purple;
     &:hover,
     &:focus {
-      color: $purple-dark;
-      background-color: $purple-light;
+      color: $white;
+      background-color: $purple;
     }
   }
+
   &.btn-sm {
     min-height: 38px;
     line-height: 38px;
