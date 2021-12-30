@@ -46,6 +46,11 @@
     &:focus {
       color: $white;
       background-color: $purple;
+      svg {
+        polygon {
+          fill: $white;
+        }
+      }
     }
   }
 
@@ -54,6 +59,14 @@
     line-height: 38px;
     padding: 0 16px;
     font-size: 16px;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    polygon {
+      fill: $purple;
+    }
   }
 }
 .btn-group {
