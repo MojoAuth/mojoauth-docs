@@ -26,6 +26,14 @@
         display: block;
         font-weight: 600;
       }
+      @media (max-width: 767px) {
+        .d-flex {
+          flex-direction: column;
+          a {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 
