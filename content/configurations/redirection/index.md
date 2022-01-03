@@ -40,7 +40,7 @@ const mojoauth = new MojoAuth( "<<Your APIKEY>>" );
 
 Pass one `redirect_url` param in the Authentication API, check out [authentication API]() for reference. Authentication API will return the state_id to check further the login/verification status.
 
-To get the verification status, use our status API. [Status API]() will return the JWT token after successful verification.
+To get the verification status, use our status API. [Status API](https://mojoauth.com/docs/api/#check-authentication-status) will return the JWT token after successful verification.
 
 ## sample JWT Token Response
 
