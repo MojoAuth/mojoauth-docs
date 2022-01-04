@@ -10,8 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
-  const origin = location.origin + "/docs/"
-  console.log(location.host)
+  const origin = "https://" + location.host + "/docs/"
   return (
     <div className="global-wrapper">
       <div id="root">
@@ -54,8 +53,8 @@ const BlogPostTemplate = ({ data, location }) => {
               <div className="content">
                 <ul className="breadcrumbs">
                   <li><Link to={origin}> MojoAuth</Link></li>
-                  {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))}
-                  {/* <li>{pathArray[pathArray.length]}</li> */}
+                  {/* {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))} */}
+                  <li>{pathArray[pathArray.length-2]}</li>
                 </ul>
                 <div
                   dangerouslySetInnerHTML={{ __html: post.html }}
