@@ -166,6 +166,27 @@ const Middle = () => {
           <h2>Comprehensive Resources</h2>
         </div>
         <div className="grid-50">
+          
+          <div className="card">
+            <div className="icon pink-big">
+              <img alt="" src="images/other-resources.svg" />
+            </div>
+            <h3 className="title">How To</h3>
+            <ul>
+              <li>
+                <Link to="/resources/jwt-token/">
+                  <img alt="" src="images/access-token.png" width={20} />
+                  <span>Handle MojoAuth Token</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/api/">
+                  <img alt="" src="images/api.png" width={20} />
+                  <span>Implement MojoAuth with API</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div className="card">
             <div className="icon blue-big">
               <img alt="" src="images/configuration.svg" />
@@ -186,27 +207,7 @@ const Middle = () => {
               <li>
                 <Link to="/configurations/redirection/">
                   <img alt="" src="images/redirection.png" width={20} />
-                  <span>Handle Redirection</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="card">
-            <div className="icon pink-big">
-              <img alt="" src="images/other-resources.svg" />
-            </div>
-            <h3 className="title">How To</h3>
-            <ul>
-              <li>
-                <Link to="/resources/jwt-token/">
-                  <img alt="" src="images/access-token.png" width={20} />
-                  <span>Handle MojoAuth Token</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/api/">
-                  <img alt="" src="images/api.png" width={20} />
-                  <span>Implement MojoAuth with API</span>
+                  <span>Custom Redirection</span>
                 </Link>
               </li>
             </ul>

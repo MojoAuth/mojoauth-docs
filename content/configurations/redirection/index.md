@@ -42,7 +42,7 @@ Pass one `redirect_url` param in the Authentication API, check out [authenticati
 
 To get the verification status, use our status API. [Status API](https://mojoauth.com/docs/api/#check-authentication-status) will return the JWT token after successful verification.
 
-## sample JWT Token Response
+## Sample JWT Token Response
 
 ```json
 {
