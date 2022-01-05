@@ -37,7 +37,7 @@ Here you just need to follow three simple steps:
 
 ## Bubble Setup
 
-The integration uses two pages, the Login page, and the Members-only(protected) page.
+The integration uses two pages, the Index page, and the Members-only(protected) page.
 
 ### Install plugin
 
@@ -64,7 +64,7 @@ For language codes, you can check the [localization doc](https://mojoauth.com/do
 </div>
 <br/>
 
-### Login page
+### Index page
 
 Drag and add the login form to your index page. A login form would be visible as displayed in the below screen
 
@@ -77,7 +77,7 @@ Drag and add the login form to your index page. A login form would be visible as
 
 Create a new page called the **Protected** page.
 
-- Select **Add a new page** from the top left corner in the **Design** tab as displayed in the below screen.
+- Select **Add a new page** by clicking on the top left corner above the **Design** tab as displayed in the below screen.
 
 <div style="text-align:center">
   <img src="/images/Add-a-new-page.png" alt="Add new page" />
@@ -93,7 +93,14 @@ Create a new page called the **Protected** page.
 
 #### Show Protected Content
 
-Add a group from **Containers** and name it **Protected Group**, then add all your protected content in that group, including text, buttons, images, and containers.
+Add a group from **Containers** and change the name from **Group A** to **Protected Group** by clicking on the top part of the grey box as shown in the screen below.
+
+<div style="text-align:center">
+  <img src="/images/group-rename.png" alt="MojoAuth Shield" />
+</div>
+<br/>
+
+Add all your protected content in that group, including text, buttons, images, and containers.
 Make sure to uncheck `This element is visible on page load.` The logic will be added later to the workflow to make sure it is visible on successful login.
 
 <div style="text-align:center">
@@ -103,7 +110,9 @@ Make sure to uncheck `This element is visible on page load.` The logic will be a
 
 #### Show not Logged-in Content
 
-Create another Group and name it `Group Not Logged-In.`This group will be visible if you do not successfully log in. Add a text message saying **You did not log in** and a link to the login page. Make sure to uncheck `This element is visible on page load.`
+Create another Group and name it `Group Not Logged-In.` just like previous one.
+
+This group will be visible if you do not successfully log in. Add a text message saying **You did not log in** and a link to the index page. Make sure to uncheck `This element is visible on page load.`
 
 <div style="text-align:center">
   <img src="/images/Group-not-logged-in.png" alt="Not logged in Grpoup" />
@@ -112,20 +121,27 @@ Create another Group and name it `Group Not Logged-In.`This group will be visibl
 
 ### Login Logic
 
-Now, let's create the login logic for the login page and protected page.
+Now, let's create the login logic for the index page and protected page.
 
-#### Login Page
+#### Index Page
 
 When the user logs in, we want to direct them to the protected page.
 
-- On the login page, go to workflow and add a new element: **Elements > A PasswordlessLogin form - User_Pressed_Login.**
+- Navigate back to the index page by clicking on the top left corner as before.
+
+- Here, go to workflow and add a new element: **Elements > A PasswordlessLogin form - User_Pressed_Login.**
 
 <div style="text-align:center">
   <img src="/images/User-pressed-login.png" alt="User pressed login" />
 </div>
 <br/>
 
-Now, follow these steps to add an action to go to the **Protected page**
+Now, click on the highlighted button in below screen to add an action to go to the **Protected page**
+
+<div style="text-align:center">
+  <img src="/images/add-an-action.png" alt="User pressed login" />
+</div>
+<br/>
 
 - Select **Action > Navigation > Go to a page**, and set the **protected** page as the destination.
 - Enable **Send More Parameters on the page**. We need this to send the access token and email to the protected page.
@@ -141,14 +157,14 @@ Now, follow these steps to add an action to go to the **Protected page**
 
 Here, we need to show the **Protected** content if the user successfully logs in, otherwise, show the **Not Logged In** content. Let's create a workflow for that.
 
-- Go to the protected page, and click workflow.
+- Navigate back to the protected page by clicking on the top left, and click workflow.
 - Add an **Event** > **Elements** > **A MojoAuth Shield is loaded**. This enables us to take action whenever the Protected page is loaded.
 - Then add an **Action** > **Plugins** > **Verify Token**
 
-On this page, we will take data sent from the login page as the parameters.
+On this page, we will take data sent from the index page as the parameters.
 
-- Set access_token, email as **Get data from page URL.**
-- Set parameter names as access_token and email.
+- Set access_token as **Get data from page URL** and add the parameter name as **access_token**
+- Set email as **Get data from page URL** and add the parameter name as **email**
 
 <div style="text-align:center">
   <img src="/images/Verify-token.png" alt="Verify Token" />
@@ -179,11 +195,11 @@ To create the logic when the user fails to log in,
 
 Now let's create a logout button to log the user out of the website.
 
-- Find and drag a button on the left side of the page.
+- On the protected page, find the button on the left side of the page under the designs tab and drag it on the **Protected Page**
 - Make sure you uncheck `This element is visible on page load.`
-  We want to show this button only if the user logs in: Continuing to the workflow above,
-- Add another **Action** > **Element Actions** > **Show.**
-- Set the Button Log Out as the element, and show **Only when: Result of Step 1 (Verify Token) logged_in is yes.**
+  We want to show this button only if the user logs in. Continuing to the workflow above,
+- Add another action by clicking on the **Action** > **Element Actions** > **Show.** just like the previous one.
+- Set the **Button LogOut** as the element, and show **Only when: Result of Step 1 (Verify Token) logged_in is yes.**
 
 This functionality would render the button only if the user gets logged in.
 
@@ -196,6 +212,14 @@ This functionality would render the button only if the user gets logged in.
 
 Finally, let's create the workflow of the Logout button.
 
-- Go to **Workflow** and add another **Event** > **Element** > **An element is clicked**.
-- Pick the Log out Button as the element.
-- Then add an **Action** > **Navigation** > **Go to a page** and select the login page.
+- Go to **Workflow** and add another event **Event** > **Element** > **An element is clicked** beside the previously created event **A MojoAuth Shield is loaded** as shown in the image below.
+
+<div style="text-align:center">
+  <img src="/images/logout-element.png" alt="Logout element" />
+</div>
+<br/>
+
+- Select **Log out Button** as the element.
+- Then add an **Action** > **Navigation** > **Go to a page** under the same event and select the index page.
+
+This will redirect you to the index page and log you out.
