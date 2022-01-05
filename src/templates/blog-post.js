@@ -10,7 +10,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
-  const origin = "https://mj-dev-docs.netlify.app/docs/"
+  const origin = "https://mojoauth.com/docs/"
+  // const origin = "https://mj-dev-docs.netlify.app/docs/"
   return (
     <div className="global-wrapper">
       <div id="root">
@@ -54,7 +55,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 <ul className="breadcrumbs">
                   <li><Link to={origin}> MojoAuth</Link></li>
                   {/* {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))} */}
-                  <li>{pathArray[pathArray.length-2]}</li>
+                  <li>{pathArray[pathArray.length -2]}</li>
                 </ul>
                 <div
                   dangerouslySetInnerHTML={{ __html: post.html }}

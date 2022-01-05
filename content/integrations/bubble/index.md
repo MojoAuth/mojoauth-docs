@@ -129,7 +129,7 @@ When the user logs in, we want to direct them to the protected page.
 
 - Navigate back to the index page by clicking on the top left corner as before.
 
-- Here, go to workflow and add a new element: **Elements > A PasswordlessLogin form - User_Pressed_Login.**
+- Here, go to workflow and add a new element: **Elements > A PasswordlessLogin form - `User_Pressed_Login`.**
 
 <div style="text-align:center">
   <img src="/images/User-pressed-login.png" alt="User pressed login" />
@@ -145,8 +145,8 @@ Now, click on the highlighted button in below screen to add an action to go to t
 
 - Select **Action > Navigation > Go to a page**, and set the **protected** page as the destination.
 - Enable **Send More Parameters on the page**. We need this to send the access token and email to the protected page.
-- Put **access_token** as key and **This Passwordless login form’s access token** as the parameter.
-- Put **email** as the key and **This Passwordless login form's email** as the parameter.
+- Put `access_token` as key and **This Passwordless login form’s access token** as the parameter.
+- Put `email` as the key and **This Passwordless login form's email** as the parameter.
 
 <div style="text-align:center">
   <img src="/images/Sending-access-token-and-email.png" alt="Send Data" />
@@ -163,8 +163,8 @@ Here, we need to show the **Protected** content if the user successfully logs in
 
 On this page, we will take data sent from the index page as the parameters.
 
-- Set access\*token as **Get data from page URL** and add the parameter name as **access\*\*\***token\*\*
-- Set email as **Get data from page URL** and add the parameter name as **email**
+- Set `access_token` as **Get data from page URL** and add the parameter name as `access_token`
+- Set `email` as **Get data from page URL** and add the parameter name as `email`
 
 <div style="text-align:center">
   <img src="/images/Verify-token.png" alt="Verify Token" />
