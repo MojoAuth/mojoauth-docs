@@ -136,7 +136,7 @@ When the user logs in, we want to direct them to the protected page.
 </div>
 <br/>
 
-Now, click on the highlighted button in below screen to add an action to go to the **Protected page**
+Now, click on the highlighted button in below screen to add an action to go to the **Protected page.**
 
 <div style="text-align:center">
   <img src="/images/add-an-action.png" alt="User pressed login" />
@@ -146,7 +146,7 @@ Now, click on the highlighted button in below screen to add an action to go to t
 - Select **Action > Navigation > Go to a page**, and set the **protected** page as the destination.
 - Enable **Send More Parameters on the page**. We need this to send the access token and email to the protected page.
 - Put **access_token** as key and **This Passwordless login form’s access token** as the parameter.
-- Put **email** as the key and **This Passwordless login forms email** as the parameter.
+- Put **email** as the key and **This Passwordless login form's email** as the parameter.
 
 <div style="text-align:center">
   <img src="/images/Sending-access-token-and-email.png" alt="Send Data" />
@@ -163,7 +163,7 @@ Here, we need to show the **Protected** content if the user successfully logs in
 
 On this page, we will take data sent from the index page as the parameters.
 
-- Set access_token as **Get data from page URL** and add the parameter name as **access_token**
+- Set access\*token as **Get data from page URL** and add the parameter name as **access\*\*\***token\*\*
 - Set email as **Get data from page URL** and add the parameter name as **email**
 
 <div style="text-align:center">
@@ -174,7 +174,7 @@ On this page, we will take data sent from the index page as the parameters.
 Now let's quickly create the logic to show the protected content when the user successfully logs in.
 
 - Add another **Action** > **Element Actions** > **Show.**
-- Then set the element as our Group Protected Content, and set "Only when: Result of Step 1 (Verify Token)'s logged_in is yes"
+- Then set the element as our Group Protected Content, and set **Only when: Result of Step 1 (Verify Token)'s logged_in is yes.**
 
 <div style="text-align:center">
   <img src="/images/Show-protected-group.png" alt="Show protected Group" />
@@ -184,7 +184,7 @@ Now let's quickly create the logic to show the protected content when the user s
 To create the logic when the user fails to log in,
 
 - Add another **Action** > **Element Actions** > **Show.**
-- Then set the element as our Group Not Logged In, and set **Only when: Result of Step 1 (Check Logged-In) logged_in is no**
+- Then set the element as our Group Not Logged In, and set **Only when: Result of Step 1 (Check Logged-In) logged_in is no.**
 
 <div style="text-align:center">
   <img src="/images/Show-group-not-logged-in.png" alt="Show not logged in group" />
@@ -195,7 +195,7 @@ To create the logic when the user fails to log in,
 
 Now let's create a logout button to log the user out of the website.
 
-- On the protected page, find the button on the left side of the page under the designs tab and drag it on the **Protected Page**
+- On the protected page, find the button on the left side of the page under the designs tab and drag it on the **Protected Page.**
 - Make sure you uncheck `This element is visible on page load.`
   We want to show this button only if the user logs in. Continuing to the workflow above,
 - Add another action by clicking on the **Action** > **Element Actions** > **Show.** just like the previous one.
