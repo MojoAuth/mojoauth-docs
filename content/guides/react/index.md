@@ -50,27 +50,35 @@ To start Integrating MojoAuth in react, first create a react app using create-re
 npm install create-react-app
 ```
 
-1. Import React from 'react' in your App component
+1. Install MojoAuth npm module to creact a MojoAuth instance.
+
+```
+npm install mojoauth-web-sdk
+```
+
+2. Import React from 'React' in your App component.
 
 ```jsx
 import React from "react"
 ```
 
-2. Use the UseState hook to create a state that would hold the user data after login. Set the initial state to null.
+3. Import MojoAuth from 'mojoauth-web-sdk' in your App Component.
 
 ```jsx
-const [payload, setpayload] = React.useState(null)
+import MojoAuth from "mojoauth-web-sdk"
 ```
 
-3. Use the UseEffect hook to create the MojoAuth instance.
+4. Use the UseState hook to create a state that would hold the user data after login. Set the initial state to null.
+
+```jsx
+const [payload, setPayload] = React.useState(null)
+```
+
+3. Create the MojoAuth instance using your APIKey obtained from your MojoAuth dashboard.
 
 ```jsx
 React.useEffect(() => {
-  const script = document.createElement("script")
-  script.src = "https://cdn.mojoauth.com/js/mojoauth.min.js"
-  document.body.appendChild(script)
-
-  const mojoauth = new window.MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
+  const mojoauth = new MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
 }, [])
 ```
 
@@ -86,7 +94,7 @@ React.useEffect(() => {
 
 ```jsx
 mojoauth.signInWithMagicLink().then(payload => {
-  setpayload(payload)
+  setPayload(payload)
 })
 ```
 
@@ -95,7 +103,8 @@ mojoauth.signInWithMagicLink().then(payload => {
 6. Add the MojoAuth passwordless login using **Email OTP** in the useEffect hook below the instance. Set the response to payload using setPayload in .then() function.
 
 ```jsx
-mojoauth.signInWithEmailOTP().then(response => console.log(response))
+mojoauth.signInWithEmailOTP().then(payload => {
+  setPayload(payload))
 ```
 
 7. After you have been logged in, enable WebAuthn form will be rendered if you have enabled it in your MojoAuth dashboard.
@@ -119,24 +128,18 @@ The next time you log in, you will directly be prompted to enter the key/fingerp
 
 ```jsx
 import React from "react"
+import MojoAuth from "mojoauth-web-sdk"
 
 function App() {
-  const [payload, setpayload] = React.useState(null)
+  const [payload, setPayload] = React.useState(null)
 
   //  1 Initialize and show the form
   React.useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://cdn.mojoauth.com/js/mojoauth.min.js"
-    document.body.appendChild(script)
-
-    const mojoauth = new window.MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
+    const mojoauth = new MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
     mojoauth.signInWithMagicLink().then(payload => {
-      setpayload(payload)
+      setPayload(payload)
     })
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
+  }, [payload])
 
   return (
     <div>
