@@ -131,13 +131,13 @@ import React from "react"
 import MojoAuth from "mojoauth-web-sdk"
 
 function App() {
-  const [payload, setpayload] = React.useState(null)
+  const [payload, setPayload] = React.useState(null)
 
   //  1 Initialize and show the form
   React.useEffect(() => {
     const mojoauth = new MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
     mojoauth.signInWithMagicLink().then(payload => {
-      setpayload(payload)
+      setPayload(payload)
     })
   }, [payload])
 
