@@ -44,7 +44,7 @@ Here you just need to follow three simple steps:
 
 ## Integrate MojoAuth
 
-To start Integrating MojoAuth in react, first create a next app using create-next-app and follow the given steps:
+To start Integrating MojoAuth in NextJS, first create a next app using create-next-app and follow the given steps:
 
 ```
 npm install create-next-app
