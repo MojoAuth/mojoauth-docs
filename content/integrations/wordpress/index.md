@@ -1,4 +1,10 @@
-# MojoAuth Passwordless Authentication
+---
+title: Getting Started - WordPress
+tags: ["WordPress", "nocode"]
+description: "A quick implementation guide to integrating MojoAuth magic link to your WordPress site."
+---
+
+# Get Started - WordPress
 
 WordPress is an open-source and free content material management system that is written in PHP and uses MySQL or MariaDB databases. WordPress features have a plugin architecture and different templates, which are regularly referred to as WordPress Themes.
 
@@ -15,7 +21,7 @@ WordPress is an open-source and free content material management system that is 
 
 ## Activation
 
-- To turn on the plugin, navigate to WordPress Admin Panel-\&gt;MojoAuth
+- To turn on the plugin, navigate to WordPress Admin Panel -> MojoAuth
 - On the Setting, input your API Key, And click on &quot;Get Public Certificate&quot; to get the Certificate Automatically.
 - Select language to localize your website according to your country or region.
 
@@ -88,7 +94,7 @@ Custom Redirection will redirect your user to the URL where your Wordpress appli
 While Troubleshooting, be sure to take a look at the following issues:
 
 - WordPress plugin uses `wp_remote_request` serve to run APIs that do not directly call cURL or fsockopen, so please make sure that cURL stays open on the server.
-- WordPress plugin used `chilkat_9_5_0` so please make sure that chilkat_9_5_0 stays open on the server.
+- WordPress plugin used `chilkat_9_5_0` so please make sure that `chilkat_9_5_0` stays open on the server.
 - If you have got enabled any caching plugin to your website online, then please you should definitely clear the cache from it after making any update/customization to the plugin.
 
 ### How to Uninstall plugin?
