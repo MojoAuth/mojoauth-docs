@@ -87,8 +87,8 @@ Custom Redirection will redirect your user to the URL where your Wordpress appli
 
 While Troubleshooting, be sure to take a look at the following issues:
 
-- WordPress plugin uses &quot;wp_remote_request&quot; serve to run APIs that do not directly call cURL or fsockopen, so please make sure that cURL stays open on the server.
-- WordPress plugin used &quot;chilkat_9_5_0&quot; so please make sure that chilkat_9_5_0 stays open on the server.
+- WordPress plugin uses `wp_remote_request` serve to run APIs that do not directly call cURL or fsockopen, so please make sure that cURL stays open on the server.
+- WordPress plugin used `chilkat_9_5_0` so please make sure that chilkat_9_5_0 stays open on the server.
 - If you have got enabled any caching plugin to your website online, then please you should definitely clear the cache from it after making any update/customization to the plugin.
 
 ### How to Uninstall plugin?
