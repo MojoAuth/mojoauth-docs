@@ -17,6 +17,7 @@ WordPress is an open-source and free content material management system that is 
 
 - To turn on the plugin, navigate to WordPress Admin Panel-\&gt;MojoAuth
 - On the Setting, input your API Key, And click on &quot;Get Public Certificate&quot; to get the Certificate Automatically.
+- Select language to localize your website according to your country or region.
 
 <div style="text-align:center">
   <img src="./images/public-certificate.png" alt="Activation" />
@@ -65,6 +66,17 @@ This Interface will Show after successfully verify email from the end-user email
   <img src="./images/verified-interface.png" alt="Successfully Verified Interface" />
 </div>
 <br/>
+
+#### Custom Redirection
+
+Custom Redirection will redirect your user to the URL where your Wordpress application is running. To achieve this, Add the URL to your project setting as highlighted in the below screen.
+
+<div style="text-align:center">
+  <img src="./images/custom-redirection.png" alt="Successfully Verified Interface" />
+</div>
+<br/>
+
+> **_Note_**: Please note that this will not showcase the successfully verified screen and the user will get login directly on verifying the email.
 
 ### Where to see user details in the database?
 

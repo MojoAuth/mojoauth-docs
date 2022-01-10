@@ -1,7 +1,7 @@
 ---
-title: Getting Started - React App
-tags: ["HTML5", "CSS", "JS", "GetStarted", "React"]
-description: "A quick implementation guide to use MojoAuth for Passwordless using Create React App"
+title: Getting Started - Next JS App
+tags: ["HTML5", "CSS", "JS", "GetStarted", "React", "Nextjs"]
+description: "A quick implementation guide to use MojoAuth for Passwordless using Create Next App"
 ---
 
 # Get Started - React
@@ -44,39 +44,43 @@ Here you just need to follow three simple steps:
 
 ## Integrate MojoAuth
 
-To start Integrating MojoAuth in react, first create a react app using create-react-app and follow the following steps:
+To start Integrating MojoAuth in NextJS, first create a next app using create-next-app and follow the given steps:
 
 ```
-npm install create-react-app
+npm install create-next-app
 ```
 
-1. Install MojoAuth npm module to creact a MojoAuth instance.
+Install MojoAuth npm module to create a MojoAuth instance.
 
 ```
 npm install mojoauth-web-sdk
 ```
 
-2. Import React from 'React' in your App component.
+### Login component
+
+Create a Login component in your pages folder called `login.js` and do the following:-
+
+1. Import React from 'react' in your Login component.
 
 ```jsx
 import React from "react"
 ```
 
-3. Import MojoAuth from 'mojoauth-web-sdk' in your App Component.
+2. Import MojoAuth from 'mojoauth-web-sdk' in your Login Component.
 
 ```jsx
 import MojoAuth from "mojoauth-web-sdk"
 ```
 
-4. Use the UseState hook to create a state that would hold the user data after login. Set the initial state to null.
+3. You can use the UseState hook to create a state that would hold the user data after login. Set the initial state to null.
 
 ```jsx
 const [payload, setPayload] = React.useState(null)
 ```
 
-> You can manage your data/state using react core APIs like context and useState or with any of the state management frameworks like Redux, MobX etc for complex data structures.
+> You can manage your data/state using react core APIs like context and useState or with any of the state management frameworks like Redux, MobX etc. for complex data structures.
 
-3. Create the MojoAuth instance using your APIKey obtained from your MojoAuth dashboard.
+4. Create the MojoAuth instance using your APIKey obtained from your MojoAuth dashboard in the Login component.
 
 ```jsx
 React.useEffect(() => {
@@ -84,15 +88,15 @@ React.useEffect(() => {
 }, [])
 ```
 
-4. Add the following div on your return function where you want the MojoAuth passwordless login form to be rendered.
+5. Add the following div on your return function where you want the MojoAuth passwordless login form to be rendered.
 
 ```jsx
 <div id="mojoauth-passwordless-form"></div>
 ```
 
-> MojoAuth passwordless login form will be rendered in the above div on your web page
+> MojoAuth passwordless login form will be rendered in the above div on your web page.
 
-5. Add the MojoAuth passwordless login using **Magic Link** in the useEffect hook below the instance. Set the response to payload using setPayload in .then() function.
+6. Add the MojoAuth passwordless login using **Magic Link** in the useEffect hook below the instance. Set the response to payload using setPayload in .then() function.
 
 ```jsx
 mojoauth.signInWithMagicLink().then(payload => {
@@ -120,19 +124,19 @@ mojoauth.signInWithEmailOTP().then(payload => {
 
 The next time you log in, you will directly be prompted to enter the key/fingerprint. After verifying you will be logged in.
 
-8. Display the user data in JSON format using the payload state in the return function after the user is logged in.
+8. Display the user data in JSON format using the payload state in the return function after the user is successfully logged in.
 
 ```jsx
 <pre>{JSON.stringify(payload, null, 4)}</pre>
 ```
 
-## Example
+#### Example
 
 ```jsx
 import React from "react"
 import MojoAuth from "mojoauth-web-sdk"
 
-function App() {
+function Login() {
   const [payload, setPayload] = React.useState(null)
 
   //  1 Initialize and show the form
@@ -153,7 +157,45 @@ function App() {
   )
 }
 
-export default App
+export default Login
+```
+
+### MyApp component
+
+1. Now in the MyApp component, import the `dynamic` module from the next library.
+
+```jsx
+import dynamic from "next/dynamic"
+```
+
+2. Dynamically import the Login component with ssr value set to false to avoid server side rendering error in NextJS.
+
+```jsx
+const Login = dynamic(() => import("./login"), {
+  ssr: false,
+})
+```
+
+Return the Login Component along with your other components.
+
+```jsx
+return (<Login/>
+        ...)
+```
+
+#### Example
+
+```jsx
+import dynamic from "next/dynamic"
+
+function MyApp({ Component, pageProps }) {
+  const Login = dynamic(() => import("./login"), {
+    ssr: false,
+  })
+  return <Login />
+}
+
+export default MyApp
 ```
 
 ## Mojouth Passwordless Login Flow

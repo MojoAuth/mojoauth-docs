@@ -1,17 +1,17 @@
 ---
-title: Handle Redirection
+title: Custom Redirection
 tags: ["HTML5", "CSS", "JS", "GetStarted"]
-description: "A quick implementation guide to handle redirection in your project."
+description: "A quick implementation guide to handle custom redirection in your project."
 ---
 
-# Handle Redirection
+# Custom Redirection
 
 Redirect your users to a specific URL after authentication once they click on the email magic link and get the JWT token at the redirect URL.
 
 To achieve this use case, add the URL to your project’s setting as displayed in the below screen:
 
 <div id="mojoauth-preview "style="text-align:center">
-  <img src="../../assets/common-images/redirection_url.png" alt="MojoAuth" />
+  <img src="../../assets/common-images/redirection-url.png" alt="MojoAuth" />
 </div>
 <br/>
 
@@ -21,8 +21,8 @@ Pass one `redirect_url` param in the script where you create the instance of Moj
 
 ```js
 const mojoauth = new MojoAuth("<Your MojoAuth API Key>", {
-  language: "it",
-  redirect_url: "localhost:5000",
+  language: "it", //Localize your website according to a country or region.
+  redirect_url: "https://example.com", //The URL where the user will be redirected after successful authentication. It can be http://localhost:5000.
 })
 ```
 
