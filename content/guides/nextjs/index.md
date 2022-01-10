@@ -4,7 +4,7 @@ tags: ["HTML5", "CSS", "JS", "GetStarted", "React", "Nextjs"]
 description: "A quick implementation guide to use MojoAuth for Passwordless using Create Next App"
 ---
 
-# Get Started - React
+# Get Started - NextJS
 
 To communicate with MojoAuth you will need some details about the application. These details are required for setup and initiate the implementation of Passwordless Login.
 
