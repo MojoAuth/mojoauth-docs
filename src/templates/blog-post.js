@@ -10,7 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
-  const origin = process.env.SITE_URL +"docs/"
+  const origin = "https://mojoauth.com/docs/"
   return (
     <div className="global-wrapper">
       <div id="root">
