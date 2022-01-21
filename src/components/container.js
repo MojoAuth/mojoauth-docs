@@ -14,7 +14,7 @@ const Middle = () => {
             <div className="subtitle">
               <label for="objective">Objective</label>
               <p>
-                Create a passwordless authetication system for any organization,
+                Create a passwordless authentication system for any organization,
                 where they can use our APIs to provide seamless auth experiences
                 and reduce security risks for their customer.
               </p>
