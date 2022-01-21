@@ -11,7 +11,6 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pathArray = location.pathname.split("/")
   const origin = "https://mojoauth.com/docs/"
-  // const origin = "https://mj-dev-docs.netlify.app/docs/"
   return (
     <div className="global-wrapper">
       <div id="root">
