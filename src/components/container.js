@@ -59,7 +59,7 @@ const Middle = () => {
         </div>
       </section>
       {/*Hero section*/}
-      <section className="application-guide py-72">
+      <section id='integrations' className="application-guide py-72">
         <div className="section-header">
           <h2>Application Guides</h2>
         </div>
@@ -221,7 +221,7 @@ const Middle = () => {
         </div>
       </section>
       {/* SDK References Section */}
-      <section className="sdk py-72">
+      <section id='libraries' className="sdk py-72">
         <div className="section-header">
           <h2>SDK References</h2>
         </div>
