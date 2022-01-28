@@ -106,7 +106,8 @@ mojoauth.signInWithMagicLink().then(payload => {
 
 ```jsx
 mojoauth.signInWithEmailOTP().then(payload => {
-  setPayload(payload))
+  setPayload(payload)
+})
 ```
 
 7. After you have been logged in, enable WebAuthn form will be rendered if you have enabled it in your MojoAuth dashboard.

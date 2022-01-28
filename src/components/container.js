@@ -172,7 +172,7 @@ const Middle = () => {
           <h2>Comprehensive Resources</h2>
         </div>
         <div className="grid-50">
-          
+
           <div className="card">
             <div className="icon pink-big">
               <img alt="" src="images/other-resources.svg" />
@@ -263,19 +263,23 @@ const Middle = () => {
             </Link>
           </div>
           <div className="card">
+            <Link to="/sdks/php/">
+              <div className="icon">
+                <img alt="" src="images/php.svg" />
+              </div>
+              <h3 className="title">
+                <span>PHP</span>
+              </h3>
+            </Link>
+          </div>
+          <div className="card">
             <div className="icon">
               <img alt="" src="images/python.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">Python</h3>
           </div>
-          <div className="card">
-            <div className="icon">
-              <img alt="" src="images/php.svg" />
-            </div>
-            <div className="tag">Coming Soon</div>
-            <h3 className="title">PHP</h3>
-          </div>
+
           <div className="card">
             <div className="icon">
               <img alt="" src="images/ruby.svg" />
