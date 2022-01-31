@@ -185,12 +185,6 @@ const Middle = () => {
                   <span>Handle MojoAuth Token</span>
                 </Link>
               </li>
-              <li>
-                <Link to="/api/">
-                  <img alt="" src="images/api.png" width={20} />
-                  <span>Implement MojoAuth with API</span>
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="card">
