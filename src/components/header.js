@@ -76,6 +76,24 @@ export default class Header extends Component {
             <div className="nav-right">
               <ul class="nav-links">
                 <li>
+                  <label class="dropdown">
+                    <div class="dd-button">Products</div>
+                    <input type="checkbox" class="dd-input" id="products" />
+                    <ul class="dd-menu">
+                      <li>
+                        <a href="https://mojoauth.com/products/email-magic-link/">
+                          Email Magic Link
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://mojoauth.com/products/email-otp/">
+                          Email OTP
+                        </a>
+                      </li>
+                    </ul>
+                  </label>
+                </li>
+                <li>
                   <a href="https://mojoauth.com/docs" className="active">
                     Docs
                   </a>
