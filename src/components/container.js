@@ -2,21 +2,18 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Middle = () => {
-  const removeClass=()=>{
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        document.getElementById( "products" ).checked =(document.getElementById( "products" ).checked)? false : document.getElementById( "products" ).checked ;
-  }
   return (
     <main>
       {/*Hero section*/}
-      <section onClick={removeClass} className="py-72">
+      <section className="py-72">
         <div className="hero grid-40-60">
           <div className="description">
             <h1 className="title">
               Getting started with the <span>MojoAuth</span>
             </h1>
             <div className="subtitle">
-              <label for="objective">Objective</label>
+            {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
+              <span >Objective</span>
               <p>
                 Create a passwordless authentication system for any organization,
                 where they can use our APIs to provide seamless auth experiences
@@ -63,7 +60,7 @@ const Middle = () => {
         </div>
       </section>
       {/*Hero section*/}
-      <section onClick={removeClass} id='integrations' className="application-guide py-72">
+      <section id='integrations' className="application-guide py-72">
         <div className="section-header">
           <h2>Application Guides</h2>
         </div>
@@ -171,7 +168,7 @@ const Middle = () => {
       </section>
       {/* Application Guides Section */}
       {/* Resources Section */}
-      <section onClick={removeClass} className="resources py-72">
+      <section className="resources py-72">
         <div className="section-header">
           <h2>Comprehensive Resources</h2>
         </div>
@@ -219,7 +216,7 @@ const Middle = () => {
         </div>
       </section>
       {/* SDK References Section */}
-      <section onClick={removeClass} id='libraries' className="sdk py-72">
+      <section id='libraries' className="sdk py-72">
         <div className="section-header">
           <h2>SDK References</h2>
         </div>

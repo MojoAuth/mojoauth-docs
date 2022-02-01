@@ -31,7 +31,7 @@ export default class Header extends Component {
     }
   }
 
-  bodyClickHandler = () => {
+  bodyClickHandler = (e) => {
     if (this._shouldClose) {
       this.setState({
         toggleOpen: false,
@@ -43,11 +43,23 @@ export default class Header extends Component {
 
   componentDidMount() {
     document.body.addEventListener("click", this.bodyClickHandler)
+    window.addEventListener('click', function(e){
+    if (!document.getElementById('products-dropdown').contains(e.target)){
+      //eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      document.getElementById( "products" ).checked = document.getElementById( "products" ).checked? false : document.getElementById( "products" ).checked;
+    }
+  });
   }
 
   componentWillUnmount() {
     document.body.removeEventListener("click", this.bodyClickHandler)
-  }
+    window.removeEventListener('click', function(e){
+    if (!document.getElementById('products-dropdown').contains(e.target)){
+      //eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      document.getElementById( "products" ).checked = document.getElementById( "products" ).checked? false : document.getElementById( "products" ).checked;
+    }});
+  
+}
 
   render() {
     return (
@@ -75,7 +87,7 @@ export default class Header extends Component {
 
             <div className="nav-right">
               <ul class="nav-links">
-                <li>
+                <li id="products-dropdown">
                   <label class="dropdown">
                     <div class="dd-button">Products</div>
                     <input type="checkbox" class="dd-input" id="products" />
