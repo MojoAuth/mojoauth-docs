@@ -162,6 +162,12 @@ const Middle = () => {
                   <span>Wordpress</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/dev-integrations/mailazy/">
+                  <img alt="" src="images/mailazy.svg" width={20} />
+                  <span>Mailazy</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
