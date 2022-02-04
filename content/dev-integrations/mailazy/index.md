@@ -4,7 +4,7 @@ tags: ["Mailazy", "integration", "GetStarted"]
 description: "A quick implementation guide to configure Mailazy to send transactional email to your application users."
 ---
 
-# GetStarted - Mailazy
+# Get Started - Mailazy
 
 This document provides instructions to configure Mailazy integration for sending out transactional emails.
 
