@@ -12,7 +12,7 @@ This document provides instructions to configure Mailazy integration for sending
 
 This section covers the required configurations that you need to perform in the MojoAuth Dashboard under Marketplace for configuring Mailazy integration.
 
-1. Log in to your MojoAuth Dashboard account, select your app and navigate to Marketplace.
+1. Log in to your MojoAuth Dashboard account, select your project and navigate to Marketplace.
    The following screen will appear:
 
 <div style="text-align:center">
@@ -77,6 +77,11 @@ The following screen will appear upon email id verification:
 
 9. Upon successful verification, it generates Key and Secret that you can use to configure Mailazy as SMTP provider in MojoAuth. The configuration has been explained below.
 
+<div style="text-align:center">
+  <img src="/images/access-keys.png" alt="MojoAuth" />
+</div>
+<br/>
+
 > Note: You can use generated Key and Secret to integrate Mailazy for sending emails in any application.
 
 > Note: Make sure to copy Key and Secret. To get these values later, you will have to regenerate/reset.
@@ -85,4 +90,18 @@ The following screen will appear upon email id verification:
 
 10. Add your From Name and From Email which you want to use in sending Emails from Mailazy and click update.
 
+<div style="text-align:center">
+  <img src="/images/mail-name-update.png" alt="MojoAuth" />
+</div>
+<br/>
+
 You can view your added integration under Configured Intergations.
+
+<div style="text-align:center">
+  <img src="/images/configured.png" alt="MojoAuth" />
+</div>
+<br/>
+
+## Keep Reading
+
+[How to handle MojoAuth token?](/resources/jwt-token/)
