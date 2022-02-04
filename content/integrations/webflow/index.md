@@ -4,7 +4,7 @@ tags: ["Webflow", "nocode"]
 description: "A quick implementation guide to integrating MojoAuth magic link to your Webflow site."
 ---
 
-# GetStarted - Webflow
+# Get Started - Webflow
 
 To use MojoAuth in your application, you will need an account and some credentials. These credentials are required to setup and initiate the implementation of Passwordless Login.
 

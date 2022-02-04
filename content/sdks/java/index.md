@@ -3,7 +3,7 @@ title: Verify JWT Token - Golang
 description: "A quick implementation guide to verify MojoAuth token using Golang SDK."
 ---
 
-#JAVA SDK
+# JAVA SDK
 
 ## Setup and Install SDK
 

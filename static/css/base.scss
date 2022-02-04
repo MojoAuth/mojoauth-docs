@@ -242,3 +242,7 @@ pre[class*="language-"] {
     background-color: $blue-dark;
   }
 }
+
+%d-flex {
+  display: flex;
+}

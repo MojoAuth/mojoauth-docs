@@ -162,6 +162,7 @@ const Middle = () => {
                   <span>Wordpress</span>
                 </Link>
               </li>
+              
             </ul>
           </div>
         </div>
@@ -186,6 +187,12 @@ const Middle = () => {
                   <span>Handle MojoAuth Token</span>
                 </Link>
               </li>
+              {/* <li>
+                <Link to="/dev-integrations/email-whitelisting/">
+                  <img alt="" src="images/mailazy.svg" width={20} />
+                  <span>Integrate Mailazy</span>
+                </Link>
+              </li> */}
             </ul>
           </div>
           <div className="card">
