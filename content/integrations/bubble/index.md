@@ -4,7 +4,7 @@ tags: ["bubble", "plugin", "integration", "GetStarted"]
 description: "A quick implementation guide to use MojoAuth for Passwordless using Bubble.io Integration."
 ---
 
-# GetStarted - Bubble.io
+# Get Started - Bubble.io
 
 To communicate with MojoAuth, you will need some details about the application. These details are required for setup and initiate the implementation of Passwordless Login.
 
