@@ -102,6 +102,13 @@ export default class Header extends Component {
                           Email OTP
                         </a>
                       </li>
+                      <li>
+                                                    <a href="javascript: void(0)">Social Login<span>Coming
+                                                            Soon</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript: void(0)">Phone OTP<span>Coming Soon</span></a>
+                                                </li>
                     </ul>
                   </label>
                 </li>

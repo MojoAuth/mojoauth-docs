@@ -1,10 +1,10 @@
 ---
-title: Getting Started - Mailazy
+title: Getting Started - Email-Whitelisting
 tags: ["Mailazy", "integration", "GetStarted"]
 description: "A quick implementation guide to configure Mailazy to send transactional email to your application users."
 ---
 
-# Get Started - Mailazy
+# Get Started - Email Whitelisting
 
 This document provides instructions to configure Mailazy integration for sending out transactional emails.
 
