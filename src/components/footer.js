@@ -120,7 +120,7 @@ const Footer = () => {
                     <section class="footer-bottom">
                         <div class="w-100">
                             <div class="copyright">
-                                <p>Copyright 2021, MojoAuth</p>
+                                <p>{`Copyright ${new Date().getFullYear()}, MojoAuth`}</p>
                             </div>
 
 
