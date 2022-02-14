@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-netlify`,
+    // `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -137,6 +137,15 @@ module.exports = {
         filter: (node, getNode) => node.frontmatter.tags !== "exempt",
       },
     },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: "PEFIRLXAO1",
+        apiKey: "0ece8938c832bdd63678eb395c3219af",
+        queries: require("./src/utils/algolia-queries")
+      },
+    },
+    `gatsby-plugin-styled-components`
   ],
   pathPrefix: `/docs`,
 }

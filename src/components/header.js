@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 import Logo from "../../static/logo.svg"
+import Search from "./search"
+const searchIndices = [{ name: `Pages`, title: `Pages` }]
 // Header component
 export default class Header extends Component {
   constructor(props) {
@@ -45,7 +47,7 @@ export default class Header extends Component {
     document.body.addEventListener("click", this.bodyClickHandler)
     window.addEventListener('click', function(e){
     if (!document.getElementById('products-dropdown').contains(e.target)){
-      //eslint-disable-next-line @typescript-eslint/no-unused-expressions
+     
       document.getElementById( "products" ).checked = document.getElementById( "products" ).checked? false : document.getElementById( "products" ).checked;
     }
   });
@@ -55,7 +57,6 @@ export default class Header extends Component {
     document.body.removeEventListener("click", this.bodyClickHandler)
     window.removeEventListener('click', function(e){
     if (!document.getElementById('products-dropdown').contains(e.target)){
-      //eslint-disable-next-line @typescript-eslint/no-unused-expressions
       document.getElementById( "products" ).checked = document.getElementById( "products" ).checked? false : document.getElementById( "products" ).checked;
     }});
   
@@ -84,6 +85,7 @@ export default class Header extends Component {
                 <img alt="" src={Logo} width="117" />
               </Link>
             </div>
+            <Search indices={searchIndices} />
 
             <div className="nav-right">
               <ul class="nav-links">
