@@ -103,11 +103,11 @@ export default class Header extends Component {
                         </a>
                       </li>
                       <li>
-                                                    <a href="javascript: void(0)">Social Login<span>Coming
+                                                    <a href="#0">Social Login<span>Coming
                                                             Soon</span></a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript: void(0)">Phone OTP<span>Coming Soon</span></a>
+                                                    <a href="#0">Phone OTP<span>Coming Soon</span></a>
                                                 </li>
                     </ul>
                   </label>
