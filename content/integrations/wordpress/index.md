@@ -89,6 +89,20 @@ Custom Redirection will redirect your user to the URL where your Wordpress appli
 - You can see the user&#39;s email id and username in the &quot;PREFIX_users&quot; Table.
 - And plugin options config in the &quot;PREFIX_options&quot; Table.
 
+### WooCommerce Support
+MojoAuth Wordpress plugin also works with WooCommerce and allows your users to authenticate during checkout.
+
+### ShortCode
+
+**Editor Shortcode**
+
+`[mojoauth]`
+
+**PHP Shortcode**
+
+`<?php echo do_shortcode('[mojoauth]'); ?>`
+
+
 ### How to troubleshoot the plugin?
 
 While Troubleshooting, be sure to take a look at the following issues:

@@ -13,7 +13,7 @@ const Middle = () => {
             </h1>
             <div className="subtitle">
             {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
-              <label for="objective">Objective</label>
+              <span >Objective</span>
               <p>
                 Create a passwordless authentication system for any organization,
                 where they can use our APIs to provide seamless auth experiences
