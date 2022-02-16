@@ -25,14 +25,18 @@ const pageQuery = `{
     }
   }
 }`
-function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+
+function pageToAlgoliaRecord({ node: { id, frontmatter, headings, fields, ...rest } }) {
+  const _headings = headings.map(h => h.value);
   return {
     objectID: id,
     ...frontmatter,
+    headings: _headings,
     ...fields,
     ...rest,
   }
 }
+
 const queries = [
   {
     query: pageQuery,
