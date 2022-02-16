@@ -75,10 +75,10 @@ const Footer = () => {
                                                 <a href="#">WebAuthn</a>
                                             </li> --> */}
                                         <li>
-                                            <a href="#1">Social Login<span>Coming Soon</span></a>
+                                            <a href="javascript: void(0)">Social Login<span>Coming Soon</span></a>
                                         </li>
                                         <li>
-                                            <a href="#0">Phone OTP<span>Coming Soon</span></a>
+                                            <a href="javascript: void(0)">Phone OTP<span>Coming Soon</span></a>
                                         </li>
                                     </ul>
                                 </div>

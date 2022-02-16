@@ -20,8 +20,8 @@ export default function Search({ indices }) {
   const searchClient = useMemo(
     () =>
       algoliasearch(
-        process.env.GATSBY_ALGOLIA_APP_ID,
-        process.env.GATSBY_ALGOLIA_SEARCH_KEY
+        "PEFIRLXAO1",
+        "0ece8938c832bdd63678eb395c3219af"
       ),
     []
   )

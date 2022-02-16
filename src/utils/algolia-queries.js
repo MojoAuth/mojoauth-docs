@@ -11,7 +11,11 @@ const pageQuery = `{
       node {
         id
         frontmatter {
-          title
+          title,
+          tags
+        }
+        headings {
+          value
         }
         fields {
           slug
@@ -34,7 +38,7 @@ const queries = [
     query: pageQuery,
     transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
     indexName,
-    settings: { attributesToSnippet: [`excerpt:20`] },
+    settings: { attributesForFaceting: [`headings`] },
   },
 ]
 module.exports = queries

@@ -5,45 +5,38 @@ import {
   Highlight,
   Hits,
   Index,
-  Snippet,
   PoweredBy,
 } from "react-instantsearch-dom"
+import CustomHighlight from "./customHighlight"
 
-const HitCount = connectStateResults(({ searchResults }) => {
-  const hitCount = searchResults && searchResults.nbHits
-
-  return hitCount > 0 ? (
-    <div className="HitCount">
-      {hitCount} result{hitCount !== 1 ? `s` : ``}
+const PageHit = ({ hit }) => {
+  return (
+    <div>
+      <Link to={hit.slug}>
+        <h4>
+          <Highlight attribute="title" hit={hit} tagName="mark" />
+        </h4>
+        <CustomHighlight attribute="headings" hit={hit} tagName="mark" />
+      </Link>
     </div>
-  ) : null
-})
-
-const PageHit = ({ hit }) => (
-  <div>
-    <Link to={hit.slug}>
-      <h4>
-        <Highlight attribute="title" hit={hit} tagName="mark" />
-      </h4>
-    </Link>
-    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
-  </div>
-)
-
+  )
+}
 const HitsInIndex = ({ index }) => (
   <Index indexName={index.name}>
-    <HitCount />
     <Hits className="Hits" hitComponent={PageHit} />
   </Index>
 )
-
-const SearchResult = ({ indices, className }) => (
-  <div className={className}>
-    {indices.map(index => (
-      <HitsInIndex index={index} key={index.name} />
-    ))}
-    <PoweredBy />
-  </div>
-)
-
-export default SearchResult
+const SearchResult = ({ indices, className, searchResults }) => {
+  const hitCount = searchResults && searchResults.nbHits
+  return (
+    <div className={className}>
+      {hitCount > 0 ? (
+        indices.map(index => <HitsInIndex index={index} key={index.name} />)
+      ) : (
+        <ul> No results </ul>
+      )}
+      <PoweredBy />
+    </div>
+  )
+}
+export default connectStateResults(SearchResult)

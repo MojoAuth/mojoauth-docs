@@ -3,7 +3,7 @@ import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 import Logo from "../../static/logo.svg"
 import Search from "./search"
-const searchIndices = [{ name: `Pages`, title: `Pages` }]
+const searchIndices = [{ name: `mojoauth_docs`, title: `mojoauth_docs` }]
 // Header component
 export default class Header extends Component {
   constructor(props) {
@@ -45,22 +45,23 @@ export default class Header extends Component {
 
   componentDidMount() {
     document.body.addEventListener("click", this.bodyClickHandler)
-    window.addEventListener('click', function(e){
-    if (!document.getElementById('products-dropdown').contains(e.target)){
-     
-      document.getElementById( "products" ).checked = document.getElementById( "products" ).checked? false : document.getElementById( "products" ).checked;
-    }
-  });
+    window.addEventListener('click', function (e) {
+      if (!document.getElementById('products-dropdown').contains(e.target)) {
+
+        document.getElementById("products").checked = document.getElementById("products").checked ? false : document.getElementById("products").checked;
+      }
+    });
   }
 
   componentWillUnmount() {
     document.body.removeEventListener("click", this.bodyClickHandler)
-    window.removeEventListener('click', function(e){
-    if (!document.getElementById('products-dropdown').contains(e.target)){
-      document.getElementById( "products" ).checked = document.getElementById( "products" ).checked? false : document.getElementById( "products" ).checked;
-    }});
-  
-}
+    window.removeEventListener('click', function (e) {
+      if (!document.getElementById('products-dropdown').contains(e.target)) {
+        document.getElementById("products").checked = document.getElementById("products").checked ? false : document.getElementById("products").checked;
+      }
+    });
+
+  }
 
   render() {
     return (
@@ -105,12 +106,12 @@ export default class Header extends Component {
                         </a>
                       </li>
                       <li>
-                                                    <a href="#0">Social Login<span>Coming
-                                                            Soon</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#0">Phone OTP<span>Coming Soon</span></a>
-                                                </li>
+                        <a href="javascript: void(0)">Social Login<span>Coming
+                          Soon</span></a>
+                      </li>
+                      <li>
+                        <a href="javascript: void(0)">Phone OTP<span>Coming Soon</span></a>
+                      </li>
                     </ul>
                   </label>
                 </li>
@@ -159,8 +160,8 @@ export default class Header extends Component {
       ? this.index
       : // Create an elastic lunr index and hydrate with graphql query results
       this.props.searchIndex
-      ? Index.load(this.props.searchIndex)
-      : 0
+        ? Index.load(this.props.searchIndex)
+        : 0
 
   search = evt => {
     const query = evt.target.value
@@ -170,9 +171,9 @@ export default class Header extends Component {
       // Query the index with search string to get an [] of IDs
       results: this.index
         ? this.index
-            .search(query, { expand: true })
-            // Map over each ID and return the full document
-            .map(({ ref }) => this.index.documentStore.getDoc(ref))
+          .search(query, { expand: true })
+          // Map over each ID and return the full document
+          .map(({ ref }) => this.index.documentStore.getDoc(ref))
         : [],
     })
   }
