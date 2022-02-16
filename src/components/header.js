@@ -3,7 +3,7 @@ import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 import Logo from "../../static/logo.svg"
 import Search from "./search"
-const searchIndices = [{ name: `mojoauth_docs`, title: `mojoauth_docs` }]
+const searchIndices = [{ name: process.env.GATSBY_ALGOLIA_INDEX, title: process.env.GATSBY_ALGOLIA_INDEX }]
 // Header component
 export default class Header extends Component {
   constructor(props) {
