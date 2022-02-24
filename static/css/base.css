@@ -89,7 +89,23 @@
   display: -ms-flexbox;
   display: flex;
 }
-
+%d-flex {
+  display: flex;
+}
+%space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%align-center {
+  display: flex;
+  align-items: center;
+}
+%d-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .grid-25,
 .grid-33,
 .grid-50,

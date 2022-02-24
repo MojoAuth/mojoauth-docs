@@ -52,9 +52,11 @@ const BlogPostTemplate = ({ data, location }) => {
 
               <div className="content">
                 <ul className="breadcrumbs">
-                  <li><Link to={origin}> MojoAuth</Link></li>
+                  <li>
+                    <Link to={origin}> MojoAuth</Link>
+                  </li>
                   {/* {pathArray.map((e, i) => (e ? <li key={`crumb-${e}`}> {e} </li> : null))} */}
-                  <li>{pathArray[pathArray.length -2]}</li>
+                  <li>{pathArray[pathArray.length - 2]}</li>
                 </ul>
                 <div
                   dangerouslySetInnerHTML={{ __html: post.html }}
@@ -110,6 +112,7 @@ const BlogPostTemplate = ({ data, location }) => {
       </nav> */}
         </Layout>
         <Footer />
+        <div class="backdrop">&nbsp;</div>
       </div>
     </div>
   )
