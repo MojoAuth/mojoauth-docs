@@ -203,7 +203,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 72px;
+    width: 62px;
     height: 85px;
     z-index: 4;
     cursor: pointer;
@@ -259,8 +259,8 @@ input#navcheck:checked {
       label {
         span {
           &:first-child {
-            -webkit-transform: rotate(45deg) translate(4px, 4px);
-            transform: rotate(45deg) translate(4px, 4px);
+            -webkit-transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(5px, 5px);
             top: 0;
             left: 0;
           }
@@ -268,8 +268,8 @@ input#navcheck:checked {
             opacity: 0;
           }
           &:last-child {
-            -webkit-transform: rotate(-45deg) translate(8px, -8px);
-            transform: rotate(-45deg) translate(8px, -8px);
+            -webkit-transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(7px, -7px);
             top: 0;
             left: 0;
           }
