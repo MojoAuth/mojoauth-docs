@@ -108,7 +108,7 @@ export default class Header extends Component {
                   </svg>
                 </a>
               </div>
-              {/* <Search indices={searchIndices} /> */}
+              <Search indices={searchIndices} />
               <div class="navigation">
                 <ul>
                   <li id="products-dropdown">
@@ -172,8 +172,8 @@ export default class Header extends Component {
       ? this.index
       : // Create an elastic lunr index and hydrate with graphql query results
       this.props.searchIndex
-      ? Index.load(this.props.searchIndex)
-      : 0
+        ? Index.load(this.props.searchIndex)
+        : 0
 
   search = evt => {
     const query = evt.target.value
@@ -183,9 +183,9 @@ export default class Header extends Component {
       // Query the index with search string to get an [] of IDs
       results: this.index
         ? this.index
-            .search(query, { expand: true })
-            // Map over each ID and return the full document
-            .map(({ ref }) => this.index.documentStore.getDoc(ref))
+          .search(query, { expand: true })
+          // Map over each ID and return the full document
+          .map(({ ref }) => this.index.documentStore.getDoc(ref))
         : [],
     })
   }
