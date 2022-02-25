@@ -1,6 +1,7 @@
 import algoliasearch from "algoliasearch/lite"
 import { createRef, default as React, useState, useMemo } from "react"
 import { InstantSearch } from "react-instantsearch-dom"
+import StyledSearchBox from "./styled-search-box"
 
 import SearchBox from "./search-box"
 import StyledSearchResult from "./styled-search-result"
@@ -28,7 +29,7 @@ const Search = ({ indices }) => {
         indexName={indices[0].name}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
-        <SearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus} />
+        <StyledSearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus} />
         <StyledSearchResult
           className={styles.searchResult}
           show={query && query.length > 0 && hasFocus}

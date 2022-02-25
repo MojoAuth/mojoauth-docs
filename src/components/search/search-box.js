@@ -1,21 +1,22 @@
 import React from "react"
 import { connectSearchBox } from "react-instantsearch-dom"
-// import { Search as SearchIcon } from "@styled-icons/fa-solid"
+import { Search as SearchIcon } from "@styled-icons/fa-solid"
 
 export default connectSearchBox(
-  ({ refine, currentRefinement, className, onFocus }) => (
+  ({ refine, currentRefinement, className, onFocus, hasFocus }) => (
     <form className={className}>
       <input
+        className={`${hasFocus ? "SearchInput searchOpen" : "SearchInput"}`}
         type="text"
-        placeholder="Search documentation..."
+        placeholder="Search"
         aria-label="Search"
         onChange={e => refine(e.target.value)}
-        id={"search"}
         value={currentRefinement}
         onFocus={onFocus}
       />
-      {/* <SearchIcon className="SearchIcon" /> */}
-      <a />
+
+      <SearchIcon className="SearchIcon" />
+      {/* <a /> */}
     </form>
   )
 )
