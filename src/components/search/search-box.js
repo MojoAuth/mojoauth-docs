@@ -3,10 +3,10 @@ import { connectSearchBox } from "react-instantsearch-dom"
 import { Search as SearchIcon } from "@styled-icons/fa-solid"
 
 export default connectSearchBox(
-  ({ refine, currentRefinement, className, onFocus }) => (
+  ({ refine, currentRefinement, className, onFocus, hasFocus }) => (
     <form className={className}>
       <input
-        className="SearchInput"
+        className={`${hasFocus ? "SearchInput NewClass" : "SearchInput"}`}
         type="text"
         placeholder="Search"
         aria-label="Search"
