@@ -272,6 +272,14 @@ pre[class*="language-"] {
   @media (max-width: 992px) {
     right: 72px;
   }
+  @media (max-width: 600px) {
+    width: calc(100% - 88px);
+  }
+  form {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
   input {
     height: 44px;
     border: 1px solid $coolGray-50;
@@ -356,8 +364,8 @@ pre[class*="language-"] {
     }
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .searchOpen {
-    width: 20.4em !important;
+    width: 100% !important;
   }
 }
