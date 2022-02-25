@@ -2,18 +2,18 @@ import styled, { css } from "styled-components"
 import SearchBox from "./search-box"
 
 const open = css`
-  width: 10em;
+  width: 100%;
   background: ${({ theme }) => theme.background};
   cursor: text;
   margin-left: -1.6em;
-  padding-left: 1.6em;
+  padding-left: 2em;
 `
 
 const closed = css`
   width: 0;
   background: transparent;
   cursor: pointer;
-  margin-left: -1em;
+  margin-left: -1.6em;
   padding-left: 1em;
 `
 
@@ -38,7 +38,7 @@ export default styled(SearchBox)`
 
   .SearchIcon {
     width: 1em;
-    margin: 0.3em;
+    margin: 0.3em 0;
     color: ${({ theme }) => theme.foreground};
     pointer-events: none;
   }

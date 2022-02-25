@@ -266,3 +266,93 @@ pre[class*="language-"] {
 %d-flex {
   display: flex;
 }
+.search {
+  position: absolute;
+  right: 34px;
+  @media (max-width: 992px) {
+    right: 72px;
+  }
+  input {
+    height: 40px;
+    border: 1px solid $coolGray-50;
+    border-radius: 4px !important;
+    background-color: $white;
+    padding: 0 1rem 0 3rem;
+    &::placeholder {
+      color: $coolGray-40;
+    }
+    // @media (max-width: 992px) {
+    //   width: 20.4em !important;
+    // }
+  }
+  ul {
+    position: absolute;
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-top: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    background: $white;
+    border-radius: 4px;
+    li {
+      padding: 0 0 0.25rem !important;
+      font-size: 14px;
+      color: $coolGray-70;
+      h4 {
+        font-weight: 600;
+        border-bottom: 1px solid $coolGray-20;
+        padding-bottom: 0.25rem;
+        color: $coolGray-80;
+        font-size: 14px;
+      }
+      a {
+        transition: all 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+    }
+
+    @media (max-width: 768px) {
+      &::-webkit-scrollbar {
+        height: 4px;
+        width: 4px;
+      }
+    }
+
+    &::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.25);
+      -webkit-transition: color 0.2s ease;
+      transition: color 0.2s ease;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+  }
+  & + .navigation-wrap {
+    margin-right: 52px;
+  }
+  input ~ svg {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23020b13' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    height: 1em;
+    @media (max-width: 992px) {
+      background-size: 22px;
+      width: 1.15em !important;
+      height: 2em;
+    }
+    path {
+      display: none;
+    }
+  }
+}
