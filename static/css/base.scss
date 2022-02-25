@@ -46,11 +46,31 @@ ul {
 .text-left {
   text-align: left;
 }
+.w-100 {
+  width: 100%;
+}
 button,
 input[type="button"] {
   cursor: pointer;
   transition: color 0.35s, background-color 0.35s, border-color 0.35s,
     box-shadow 0.35s, opacity 0.35s;
+}
+%d-flex {
+  display: flex;
+}
+%space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%align-center {
+  display: flex;
+  align-items: center;
+}
+%d-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .p-0 {
   padding: 0 !important;

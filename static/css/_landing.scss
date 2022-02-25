@@ -47,8 +47,16 @@
     margin-top: 40px;
   }
   .vector {
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       display: none;
+    }
+  }
+  &.grid-40-60 {
+    @media (max-width: 1200px) {
+      & > div {
+        margin-right: 0;
+        width: 100%;
+      }
     }
   }
 }

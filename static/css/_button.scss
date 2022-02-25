@@ -49,6 +49,7 @@
       svg {
         polygon {
           fill: $white;
+          transition: all 300ms ease-in-out;
         }
       }
     }
