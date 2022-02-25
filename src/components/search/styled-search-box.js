@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import SearchBox from "./search-box"
 
 const open = css`
-  width: 100%;
+  width: 24em;
   background: ${({ theme }) => theme.background};
   cursor: text;
   margin-left: -1.6em;

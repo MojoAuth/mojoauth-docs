@@ -6,7 +6,7 @@ export default connectSearchBox(
   ({ refine, currentRefinement, className, onFocus, hasFocus }) => (
     <form className={className}>
       <input
-        className={`${hasFocus ? "SearchInput NewClass" : "SearchInput"}`}
+        className={`${hasFocus ? "SearchInput searchOpen" : "SearchInput"}`}
         type="text"
         placeholder="Search"
         aria-label="Search"

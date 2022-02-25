@@ -284,12 +284,13 @@ input#navcheck:checked {
 
 .nav-btn {
   position: absolute;
-  right: 24px;
-  top: 35px;
+  right: 16px;
+  top: 32px;
   z-index: 3;
   @media (min-width: 993px) {
     display: none;
   }
+
   label {
     span {
       display: block;

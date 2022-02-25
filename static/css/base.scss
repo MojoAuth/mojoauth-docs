@@ -273,7 +273,7 @@ pre[class*="language-"] {
     right: 72px;
   }
   input {
-    height: 40px;
+    height: 44px;
     border: 1px solid $coolGray-50;
     border-radius: 4px !important;
     background-color: $white;
@@ -354,5 +354,10 @@ pre[class*="language-"] {
     path {
       display: none;
     }
+  }
+}
+@media (max-width: 480px) {
+  .searchOpen {
+    width: 20.4em !important;
   }
 }
