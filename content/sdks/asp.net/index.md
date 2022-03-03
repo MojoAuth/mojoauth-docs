@@ -26,6 +26,10 @@ var mojoAuthHttpClient = new MojoAuthHttpClient("____key____", "____secret____")
 
 ```
 
+## APIs
+
+This section contains a list of all APIs.
+
 ### Send magic link on the email
 
 Use the MojoAuth `SendMagicLink()` Method to send magic link on the email.
