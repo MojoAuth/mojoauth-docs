@@ -274,6 +274,17 @@ const Middle = () => {
               </h3>
             </Link>
           </div>
+
+          <div className="card">
+            <Link to="/sdks/asp.net/">
+            <div className="icon">
+              <img alt="" src="images/visualstudio.svg" />
+            </div>
+            {/* <div className="tag">Coming Soon</div> */}
+            <h3 className="title"><span>Asp.net</span></h3>
+            </Link>
+          </div>
+
           <div className="card">
             <div className="icon">
               <img alt="" src="images/python.svg" />
@@ -282,19 +293,13 @@ const Middle = () => {
             <h3 className="title">Python</h3>
           </div>
 
+          
           <div className="card">
             <div className="icon">
               <img alt="" src="images/ruby.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">Ruby</h3>
-          </div>
-          <div className="card">
-            <div className="icon">
-              <img alt="" src="images/visualstudio.svg" />
-            </div>
-            <div className="tag">Coming Soon</div>
-            <h3 className="title">Asp.net</h3>
           </div>
           <div className="card">
             <div className="icon">
