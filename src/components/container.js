@@ -12,7 +12,7 @@ const Middle = () => {
               Getting started with the <span>MojoAuth</span>
             </h1>
             <div className="subtitle">
-            {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
+              {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
               <span >Objective</span>
               <p>
                 Create a passwordless authentication system for any organization,
@@ -162,7 +162,7 @@ const Middle = () => {
                   <span>Wordpress</span>
                 </Link>
               </li>
-              
+
             </ul>
           </div>
         </div>
@@ -182,17 +182,23 @@ const Middle = () => {
             <h3 className="title">How To</h3>
             <ul>
               <li>
-                <Link to="/resources/jwt-token/">
+                <Link to="/howto/jwt-token/">
                   <img alt="" src="images/access-token.png" width={20} />
                   <span>Handle MojoAuth Token</span>
                 </Link>
               </li>
               <li>
-                <Link to="/dev-integrations/email-whitelisting/">
+                <Link to="/howto/email-whitelisting/">
                   <img alt="" src="images/mailazy.svg" width={20} />
                   <span>Integrate Mailazy</span>
                 </Link>
               </li>
+              {/* <li>
+                <Link to="/howto/social-login/">
+                  <img alt="" src="images/social-login.svg" width={20} />
+                  <span>Configure Social Login</span>
+                </Link>
+              </li> */}
             </ul>
           </div>
           <div className="card">
@@ -274,6 +280,17 @@ const Middle = () => {
               </h3>
             </Link>
           </div>
+
+          <div className="card">
+            <Link to="/sdks/asp.net/">
+              <div className="icon">
+                <img alt="" src="images/visualstudio.svg" />
+              </div>
+              {/* <div className="tag">Coming Soon</div> */}
+              <h3 className="title"><span>Asp.net</span></h3>
+            </Link>
+          </div>
+
           <div className="card">
             <div className="icon">
               <img alt="" src="images/python.svg" />
@@ -282,19 +299,13 @@ const Middle = () => {
             <h3 className="title">Python</h3>
           </div>
 
+
           <div className="card">
             <div className="icon">
               <img alt="" src="images/ruby.svg" />
             </div>
             <div className="tag">Coming Soon</div>
             <h3 className="title">Ruby</h3>
-          </div>
-          <div className="card">
-            <div className="icon">
-              <img alt="" src="images/visualstudio.svg" />
-            </div>
-            <div className="tag">Coming Soon</div>
-            <h3 className="title">Asp.net</h3>
           </div>
           <div className="card">
             <div className="icon">

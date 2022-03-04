@@ -49,7 +49,7 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript sdk in th
 1. Create MojoAuth instance with your apikey
 
 ```js
-const mojoauth = new MojoAuth("<<APIKEY>>")
+const mojoauth = new MojoAuth("Your API Key")
 ```
 
 2. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
@@ -86,7 +86,7 @@ mojoauth.signInWithEmailOTP().then(response => console.log(response))
      <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("<<APIKEY>>");
+        const mojoauth = new MojoAuth("Your API Key");
         // Use signInWithEmailOTP() for authentication using Email OTP
         mojoauth.signInWithMagicLink().then(response => console.log(response));
       </script>
