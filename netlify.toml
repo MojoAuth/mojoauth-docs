@@ -1,3 +1,11 @@
 [[redirects]]
   from = "/docs/guides/webauthn/"
   to = "/docs/guides/html-and-js/"
+
+[[redirects]]
+  from = "/docs/resources/jwt-token/"
+  to = "/docs/howto/jwt-token/"
+
+[[redirects]]
+  from = "/docs/dev-integrations/email-whitelisting/"
+  to = "/docs/howto/email-whitelisting/"

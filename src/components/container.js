@@ -182,19 +182,19 @@ const Middle = () => {
             <h3 className="title">How To</h3>
             <ul>
               <li>
-                <Link to="/resources/jwt-token/">
+                <Link to="/howto/jwt-token/">
                   <img alt="" src="images/access-token.png" width={20} />
                   <span>Handle MojoAuth Token</span>
                 </Link>
               </li>
               <li>
-                <Link to="/dev-integrations/email-whitelisting/">
+                <Link to="/howto/email-whitelisting/">
                   <img alt="" src="images/mailazy.svg" width={20} />
                   <span>Integrate Mailazy</span>
                 </Link>
               </li>
               <li>
-                <Link to="/dev-integrations/social-login/">
+                <Link to="/howto/social-login/">
                   <img alt="" src="images/social-login.svg" width={20} />
                   <span>Configure Social Login</span>
                 </Link>
