@@ -80,7 +80,7 @@ const [payload, setPayload] = React.useState(null)
 
 ```jsx
 React.useEffect(() => {
-  const mojoauth = new MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
+  const mojoauth = new MojoAuth("Your API Key") // 👈 Specify your API KEY ID here
 }, [])
 ```
 
@@ -138,7 +138,7 @@ function App() {
 
   //  1 Initialize and show the form
   React.useEffect(() => {
-    const mojoauth = new MojoAuth("<<APIKEY>>") // 👈 Specify your API KEY ID here
+    const mojoauth = new MojoAuth("Your API Key") // 👈 Specify your API KEY ID here
     mojoauth.signInWithMagicLink().then(payload => {
       setPayload(payload)
     })

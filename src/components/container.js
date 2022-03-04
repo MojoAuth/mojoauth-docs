@@ -12,7 +12,7 @@ const Middle = () => {
               Getting started with the <span>MojoAuth</span>
             </h1>
             <div className="subtitle">
-            {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
+              {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
               <span >Objective</span>
               <p>
                 Create a passwordless authentication system for any organization,
@@ -162,7 +162,7 @@ const Middle = () => {
                   <span>Wordpress</span>
                 </Link>
               </li>
-              
+
             </ul>
           </div>
         </div>
@@ -193,12 +193,12 @@ const Middle = () => {
                   <span>Integrate Mailazy</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/howto/social-login/">
                   <img alt="" src="images/social-login.svg" width={20} />
                   <span>Configure Social Login</span>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="card">
@@ -283,11 +283,11 @@ const Middle = () => {
 
           <div className="card">
             <Link to="/sdks/asp.net/">
-            <div className="icon">
-              <img alt="" src="images/visualstudio.svg" />
-            </div>
-            {/* <div className="tag">Coming Soon</div> */}
-            <h3 className="title"><span>Asp.net</span></h3>
+              <div className="icon">
+                <img alt="" src="images/visualstudio.svg" />
+              </div>
+              {/* <div className="tag">Coming Soon</div> */}
+              <h3 className="title"><span>Asp.net</span></h3>
             </Link>
           </div>
 
@@ -299,7 +299,7 @@ const Middle = () => {
             <h3 className="title">Python</h3>
           </div>
 
-          
+
           <div className="card">
             <div className="icon">
               <img alt="" src="images/ruby.svg" />

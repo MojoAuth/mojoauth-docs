@@ -10,16 +10,16 @@ This guide explains how to add and configure the desired Social Login providers 
 
 ## Dashboard Configuration
 
-- #### Sign in to your MojoAuth Account
+#### Sign in to your MojoAuth Account
 
-After signing in to your account, navigate to Marketplace and click on Add Integrations.
+After signing in to your [MojoAuth Account](https://mojoauth.com/dashboard/overview), navigate to Marketplace and click on Add Integrations.
 
 <div style="text-align:center">
   <img src="./images/marketplace.png" alt="Company" />
 </div>
 <br/>
 
-- #### Select desired Social Login
+#### Select Social Login Provider
 
 Pick the social login you want to integrate to your application.
 
@@ -35,7 +35,7 @@ Depending on the social login you picked, the following screen will appear.
 </div>
 <br/>
 
-- #### Configure Social Login
+#### Configure Social Login
 
 Click on Add Integration and configure your Social Login if you have your social ID and secret.
 
@@ -58,7 +58,7 @@ Alternatively, you can also access the setup guide on the integration page under
 </div>
 <br/>
 
-- #### Update the Key and Secret
+#### Update the Key and Secret
 
 After obtaining the access keys following the above steps, enter the access keys on the integrations page and update.
 
@@ -88,19 +88,20 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 - Create MojoAuth instance with your apikey
 
 ```js
-const mojoauth = new MojoAuth("<<APIKEY>>")
+const mojoauth = new MojoAuth("Your API Key")
 ```
 
 - Pass the parameters for language selection and redirection URL
 
 ```js
-const mojoauth = new MojoAuth("<<APIKEY>>", {
+const mojoauth = new MojoAuth("Your API Key", {
   language: "language_code",
   redirect_url: "your_redirect_url",
 })
 ```
+> Localize your website according to a country or region, checkout [Localization](/configurations/localization/) guide for more details.
 
-> Redirect URL is a required parameter to configure social login in your application.
+> Redirect URL is a required parameter to configure social login in your application. [Whitelist your domain](/configurations/redirection/) to get social login working on your app.
 
 - Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
 
@@ -136,11 +137,10 @@ mojoauth.signInWithEmailOTP().then(response => console.log(response))
      <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("<<APIKEY>>", {language:"de", redirect_url:"https://www.yourproject.com"});
+        const mojoauth = new MojoAuth("Your API Key", {language:"en", redirect_url:"https://www.example.com"});
         // Use signInWithEmailOTP() for authentication using Email OTP
         mojoauth.signInWithMagicLink().then(response => console.log(response));
       </script>
-
   </body>
 </html>
 ```
@@ -183,4 +183,4 @@ We are working on more social login support. If you want a specific social login
 
 ## Keep Reading
 
-[How to Integrate Mailazy to your application?](/dev-integrations/email-whitelisting/)
+[How to Integrate Mailazy to your application?](/howto/email-whitelisting/)
