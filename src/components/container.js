@@ -193,6 +193,12 @@ const Middle = () => {
                   <span>Integrate Mailazy</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/dev-integrations/social-login/">
+                  <img alt="" src="images/social-login.svg" width={20} />
+                  <span>Configure Social Login</span>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="card">
