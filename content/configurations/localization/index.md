@@ -28,5 +28,7 @@ Get started with our [HTML and JS guide](https://mojoauth.com/docs/guides/html-a
 | German   | de   |
 | French   | fr   |
 | Spanish  | es   |
+|Portuguese|pt    |
+|Russian   |ru    |
 
 We are working on more language support. If you didn't find yours, please raise a request [here](https://mojoauthassist.freshdesk.com/support/tickets/new).
