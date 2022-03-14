@@ -121,6 +121,7 @@ The next time you log in, you will directly be prompted to enter the key/fingerp
   </body>
 </html>
 ```
+``Note : Redirect URL is an optional parameter here, whitelist your root domain to get redirected on successful authentication.``
 
 ## Mojouth Passwordless Login Flow
 
@@ -149,7 +150,7 @@ After completing the above steps the following will be the flow of passwordless 
 ```js
 const mojoauth = new MojoAuth( "<<Your APIKEY>>" );
 
-    mojoauth.signInWithStateID().then( payload => {console.log(payload)}
+    mojoauth.signInWithStateID().then( payload => {console.log(payload)});
 ```
 
 ## Enabling WebAuthn for logged-in user
