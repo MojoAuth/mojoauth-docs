@@ -3,7 +3,7 @@
   to = "/docs/guides/html-and-js/"
 
 [[redirects]]
-  from = "/docs/howto/handle-jwt-token/"
+  from = "/docs/resources/jwt-token/"
   to = "/docs/howto/handle-jwt-token/"
 
 [[redirects]]
