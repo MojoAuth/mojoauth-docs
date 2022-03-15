@@ -20,7 +20,7 @@ To achieve this use case, add the URL to your project’s setting as displayed i
 Pass one `redirect_url` param in the script where you create the instance of MojoAuth for login/signup.
 
 ```js
-const mojoauth = new MojoAuth("<Your MojoAuth API Key>", {
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
   language: "it", //Localize your website according to a country or region.
   redirect_url: "https://example.com", //The URL where the user will be redirected after successful authentication. It can be http://localhost:5000.
 })
@@ -29,11 +29,11 @@ const mojoauth = new MojoAuth("<Your MojoAuth API Key>", {
 Add the below code where you want to handle the redirection.
 
 ```js
-const mojoauth = new MojoAuth( "<<Your APIKEY>>" );
+const mojoauth = new MojoAuth( "Your MojoAuth API Key" );
  mojoauth.signInWithStateID()
  .then( payload => {
      console.log(payload)
-     }
+  })
 ```
 
 ## Using MojoAuth APIs

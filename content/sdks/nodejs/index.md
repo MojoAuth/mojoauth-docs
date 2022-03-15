@@ -62,7 +62,7 @@ var ma = require('mojoauth-sdk')(config);
 Add the calling of the `verifyToken()` function and pass the MojoAuth JWT Token to verify the token.
 
 ```
-var jwtToken = "<Your JWT Token>";
+var jwtToken = Your JWT Token";
 
 ma.mojoAPI.verifyToken(jwtToken).then(function (response) {
     console.log(response)

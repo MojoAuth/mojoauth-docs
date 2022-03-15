@@ -46,10 +46,10 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript sdk in th
 ></script>
 ```
 
-1. Create MojoAuth instance with your apikey
+1. Create MojoAuth instance with your api key
 
 ```js
-const mojoauth = new MojoAuth("Your API Key")
+const mojoauth = new MojoAuth("Your MojoAuth API Key")
 ```
 
 2. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
@@ -86,7 +86,7 @@ mojoauth.signInWithEmailOTP().then(response => console.log(response))
      <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("Your API Key");
+        const mojoauth = new MojoAuth("Your MojoAuth API Key");
         // Use signInWithEmailOTP() for authentication using Email OTP
         mojoauth.signInWithMagicLink().then(response => console.log(response));
       </script>
@@ -121,7 +121,7 @@ After successful authentication, MojoAuth provides a JWT Token. You can use this
 
 ## Validate your user
 
-To add the sdk in your PHP project you can download or pull the mojoauth php-sdk from the [github repo](https://github.com/MojoAuth/mojoauth-php), and configure it using your MojoAuth APIKEY.
+To add the sdk in your PHP project you can download or pull the mojoauth php-sdk from the [github repo](https://github.com/MojoAuth/mojoauth-php), and configure it using your MojoAuth API KEY.
 
 ### Configure Project
 
@@ -152,4 +152,4 @@ $userProfileData = $mojoAuth->getUserProfileData($access_token, $publicKey->data
 
 ## Keep Reading
 
-[How to handle MojoAuth token?](/resources/jwt-token/)
+[How to handle MojoAuth token?](/howto/handle-jwt-token/)

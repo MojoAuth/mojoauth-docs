@@ -11,7 +11,7 @@ This document takes you through the various ways MojoAuth can help you localize 
 MojoAuth allows customization for all the login, verification screens and Email templates. You can achieve this by passing one `language` param in the script where you are creating the instance of MojoAuth.
 
 ```js
-const mojoauth = new MojoAuth("<Your MojoAuth API Key>", {
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
   language: "it",
   redirect_url: "localhost:5000",
 })

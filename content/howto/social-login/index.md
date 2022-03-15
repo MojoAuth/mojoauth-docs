@@ -85,16 +85,16 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 ></script>
 ```
 
-- Create MojoAuth instance with your apikey
+- Create MojoAuth instance with your api key
 
 ```js
-const mojoauth = new MojoAuth("Your API Key")
+const mojoauth = new MojoAuth("Your MojoAuth API Key")
 ```
 
 - Pass the parameters for language selection and redirection URL
 
 ```js
-const mojoauth = new MojoAuth("Your API Key", {
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
   language: "language_code",
   redirect_url: "your_redirect_url",
 })
@@ -137,7 +137,7 @@ mojoauth.signInWithEmailOTP().then(response => console.log(response))
      <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("Your API Key", {language:"en", redirect_url:"https://www.example.com"});
+        const mojoauth = new MojoAuth("Your MojoAuth API Key", {language:"en", redirect_url:"https://www.example.com"});
         // Use signInWithEmailOTP() for authentication using Email OTP
         mojoauth.signInWithMagicLink().then(response => console.log(response));
       </script>
