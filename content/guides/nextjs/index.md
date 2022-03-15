@@ -80,11 +80,11 @@ const [payload, setPayload] = React.useState(null)
 
 > You can manage your data/state using react core APIs like context and useState or with any of the state management frameworks like Redux, MobX etc. for complex data structures.
 
-4. Create the MojoAuth instance using your APIKey obtained from your MojoAuth dashboard in the Login component.
+4. Create the MojoAuth instance using your API Key obtained from your MojoAuth dashboard in the Login component.
 
 ```jsx
 React.useEffect(() => {
-  const mojoauth = new MojoAuth("Your API Key") // 👈 Specify your API KEY ID here
+  const mojoauth = new MojoAuth("Your MojoAuth API Key") // 👈 Specify your API KEY ID here
 }, [])
 ```
 
@@ -142,7 +142,7 @@ function Login() {
 
   //  1 Initialize and show the form
   React.useEffect(() => {
-    const mojoauth = new MojoAuth("Your API Key") // 👈 Specify your API KEY ID here
+    const mojoauth = new MojoAuth("Your MojoAuth API Key") // 👈 Specify your API KEY ID here
     mojoauth.signInWithMagicLink().then(payload => {
       setPayload(payload)
     })
@@ -233,4 +233,4 @@ mojoauth.enableWebauthn(payload.oauth.access_token)
 
 ## Keep Reading
 
-[How to handle MojoAuth token?](/resources/jwt-token/)
+[How to handle MojoAuth token?](/howto/handle-jwt-token/)

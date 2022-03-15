@@ -4,8 +4,16 @@
 
 [[redirects]]
   from = "/docs/resources/jwt-token/"
-  to = "/docs/howto/jwt-token/"
+  to = "/docs/howto/handle-jwt-token/"
 
 [[redirects]]
   from = "/docs/dev-integrations/email-whitelisting/"
   to = "/docs/howto/email-whitelisting/"
+
+[[redirects]]
+  from = "/docs/howto/jwt-token/"
+  to = "/docs/howto/handle-jwt-token/"
+
+[[redirects]]
+  from = "/docs/howto/asp.net/"
+  to = "/docs/howto/asp-dot-net/"

@@ -17,8 +17,13 @@ You can send the access token to your backend server in the header of your reque
 
 You can also verify JWT Token using the MojoAuth libraries.
 
-- MojoAuth [NodeJS Library](/sdks/nodejs/)
+- [NodeJS Library](/sdks/nodejs/)
 
-- MojoAuth [Golang Library](/sdks/golang/)
+- [Golang Library](/sdks/golang/)
 
-- MojoAuth [Java Library](/sdks/java)
+- [Java Library](/sdks/java)
+
+- [PHP Library](/sdks/php/)
+
+- [ASP.Net Library](/sdks/asp-dot-net/)
+

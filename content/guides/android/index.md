@@ -184,4 +184,4 @@ Use the MojoAuth `verifyAccessToken()` Method to verify the MojoAuth JWT token.
 
 ## Keep Reading
 
-[How to handle MojoAuth token?](/resources/jwt-token/)
+[How to handle MojoAuth token?](/howto/handle-jwt-token/)

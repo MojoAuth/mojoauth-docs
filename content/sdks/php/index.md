@@ -7,7 +7,7 @@ description: "A quick implementation guide to verify MojoAuth token using PHP."
 
 ## Setup PHP
 
-To add the sdk in your PHP project you can download or pull the mojoauth php-sdk from the [github repo](https://github.com/MojoAuth/mojoauth-php), and configure it using your MojoAuth APIKEY.
+To add the sdk in your PHP project you can download or pull the mojoauth php-sdk from the [github repo](https://github.com/MojoAuth/mojoauth-php), and configure it using your MojoAuth API KEY.
 
 ### Configure Project
 
@@ -16,8 +16,8 @@ To add the sdk in your PHP project you can download or pull the mojoauth php-sdk
 
 require_once(__DIR__."mojoAuthAPI.php");
 
-// mojoauth apikey replace at "MOJOAUTH_APIKEY"
-$mojoAuth = new mojoAuthAPI("MOJOAUTH_APIKEY");
+// Get your MojoAuth API Key from MojoAuth Dashboard
+$mojoAuth = new mojoAuthAPI("Your MojoAuth API Key");
 ```
 
 ### Verify JWT Token

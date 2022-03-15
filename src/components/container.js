@@ -182,7 +182,7 @@ const Middle = () => {
             <h3 className="title">How To</h3>
             <ul>
               <li>
-                <Link to="/howto/jwt-token/">
+                <Link to="/howto/handle-jwt-token/">
                   <img alt="" src="images/access-token.png" width={20} />
                   <span>Handle MojoAuth Token</span>
                 </Link>
@@ -282,7 +282,7 @@ const Middle = () => {
           </div>
 
           <div className="card">
-            <Link to="/sdks/asp.net/">
+            <Link to="/sdks/asp-dot-net/">
               <div className="icon">
                 <img alt="" src="images/visualstudio.svg" />
               </div>
