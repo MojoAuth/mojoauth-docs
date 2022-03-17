@@ -14,7 +14,7 @@ To communicate with MojoAuth you will need some details about the application. T
 
 Here you just need to follow three simple steps:
 
-- Login to [MojoAuth](https://mojoauth.com/signin) and the below screen appear:
+- Login to [MojoAuth](https://mojoauth.com/signin) Dashboard:
 
 <div id="mojoauth-preview "style="text-align:center">
   <img src="../../assets/common-images/login.png" alt="MojoAuth" />
@@ -67,6 +67,8 @@ const mojoauth = new MojoAuth("Your MojoAuth API Key", {
   redirect_url: "your_redirect_url",
 })
 ```
+
+>Redirect URL is an optional parameter here, [whitelist your root domain](/configurations/redirection/) to get redirected on successful authentication.
 
 3. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
 
@@ -121,7 +123,7 @@ The next time you log in, you will directly be prompted to enter the key/fingerp
   </body>
 </html>
 ```
-``Note : Redirect URL is an optional parameter here, whitelist your root domain to get redirected on successful authentication.``
+
 
 ## Mojouth Passwordless Login Flow
 

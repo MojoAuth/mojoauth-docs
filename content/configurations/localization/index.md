@@ -17,7 +17,7 @@ const mojoauth = new MojoAuth("Your MojoAuth API Key", {
 })
 ```
 
-Get started with our [HTML and JS guide](https://mojoauth.com/docs/guides/html-and-js/), or check out our [APIs](https://mojoauth.com/docs/api) if you are implementing MojoAuth using APIs.
+Get started with our [HTML and JS guide](/guides/html-and-js/), or check out our [APIs](/api) if you are implementing MojoAuth using APIs.
 
 ## Supported Language
 

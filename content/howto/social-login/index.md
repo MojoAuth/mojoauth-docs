@@ -184,4 +184,5 @@ We are working on more social login support. If you want a specific social login
 ## Keep Reading
 
 [How to Integrate Mailazy to your application?](/howto/email-whitelisting/)
-[How to add custom redirection to your application?](content/configurations/redirection)
+
+[How to add redirection to your application?](content/configurations/redirection)

@@ -14,7 +14,7 @@ To communicate with MojoAuth, you will need some details about the application. 
 
 Here you just need to follow three simple steps:
 
-- Login to [MojoAuth](https://mojoauth.com/signin) and the below screen appear:
+- Login to [MojoAuth](https://mojoauth.com/signin) Dashboard:
 
 <div style="text-align:center">
   <img src="../../assets/common-images/login.png" alt="MojoAuth" />
@@ -50,7 +50,7 @@ The integration uses two pages, the Index page, and the Members-only(protected) 
 
 - Now navigate to the Plugins tab, click Mojoauth Login, and enter the MojoAuth API Key and language as displayed in the below screen.
 
-For language codes, you can check the [localization doc](https://mojoauth.com/docs/configurations/localization/)
+For language codes, you can check the [localization doc](/configurations/localization/)
 
 <div style="text-align:center">
   <img src="/images/Enter-API-Key.png" alt="Api Key ID" />
