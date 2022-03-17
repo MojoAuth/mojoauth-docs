@@ -14,7 +14,7 @@ To communicate with MojoAuth you will need some details about the application. T
 
 Here you just need to follow three simple steps:
 
-- Login to [MojoAuth](https://mojoauth.com/signin) and the below screen appear:
+- Login to [MojoAuth](https://mojoauth.com/signin) Dashboard:
 
 <div id="mojoauth-preview "style="text-align:center">
   <img src="../../assets/common-images/login.png" alt="MojoAuth" />

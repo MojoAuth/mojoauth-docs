@@ -12,7 +12,7 @@ To use MojoAuth in your application, you will need an account and some credentia
 
 Here you just need to follow three simple steps:
 
-- Login to [MojoAuth](https://mojoauth.com/signin) and the below screen appear:
+- Login to [MojoAuth](https://mojoauth.com/signin) Dashboard:
 
 <div style="text-align:center">
   <img src="../../assets/common-images/login.png" alt="MojoAuth" />
