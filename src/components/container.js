@@ -199,6 +199,12 @@ const Middle = () => {
                   <span>Configure Social Login</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/howto/phone-login/">
+                  <img alt="" src="images/phone-otp.svg" width={20} />
+                  <span>Configure Phone Login</span>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="card">
