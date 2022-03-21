@@ -6,7 +6,7 @@ description: "A quick implementation guide to configure Phone Login to authentic
 
 # Get Started - Phone Login
 
-This guide explains how to add and configure the Phone Login to your application using MojoAuth Dashboard. You can implement Phonr Login for a quick and convenient approach for consumer registration and login.
+This guide explains how to add and configure the Phone Login to your application using MojoAuth Dashboard. You can implement Phone Login for a quick and convenient approach for consumer registration and login.
 
 ## Dashboard Configuration
 
@@ -28,8 +28,6 @@ Pick the SMS provider you want to integrate to your application.
 </div>
 <br/>
 
-
-
 #### Configure Phone Login
 
 Click on Add Integration and your Twilio configure if you have your credentials.
@@ -46,7 +44,6 @@ To add your Twilio credentials, click on setup guide and follow the instructions
 </div>
 <br/>
 
-
 ## Integrate Phone Login
 
 To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in the head of your webpage and follow the mentioned steps:
@@ -61,20 +58,30 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 - Create MojoAuth instance with your apikey
 
 ```js
-config={
-            language: "en",
-            redirect_url: "http://localhost:8080/test",
-            source: [ {type:'phone',feature:'otp'} ],
-        }
+config = {
+  language: "en",
+  redirect_url: "http://localhost:8080/test",
+  source: [{ type: "phone", feature: "otp" }],
+}
 
-const mojoauth = new MojoAuth("Your API Key",config)
-mojoauth.signIn().then( response => console.log(response))
-
+const mojoauth = new MojoAuth("Your API Key", config)
+mojoauth.signIn().then(response => console.log(response))
 ```
 
 > Localize your website according to a country or region, checkout [Localization](/configurations/localization/) guide for more details.
 
-> Redirect URL is a required parameter to configure phone login in your application. [Whitelist your domain](/configurations/redirection/) to get phone login working on your app.
+> In case of multiple sources required, just pass the source in the array.
+
+```js
+config = {
+  language: "en",
+  redirect_url: "http://localhost:8080/test",
+  source: [
+    { type: "phone", feature: "otp" },
+    { type: "email", feature: "magiclink" },
+  ],
+}
+```
 
 - Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
 
@@ -87,7 +94,7 @@ mojoauth.signIn().then( response => console.log(response))
 - Add the MojoAuth passwordless login using **Phone Login** with the following method. The response would be handled in .then() function.
 
 ```js
-mojoauth.signIn().then( response => console.log(response))
+mojoauth.signIn().then(response => console.log(response))
 ```
 
 ### Example
@@ -108,7 +115,7 @@ mojoauth.signIn().then( response => console.log(response))
             source: [ {type:'phone',feature:'otp'} ],
         }
     mojoauth.signIn().then( response => {
-             
+
             console.log( response )
         } );
       </script>
@@ -116,8 +123,8 @@ mojoauth.signIn().then( response => console.log(response))
 </html>
 ```
 
-
 ## Keep Reading
 
 [How to Integrate Mailazy to your application?](/howto/email-whitelisting/)
+
 [How to add custom redirection to your application?](content/configurations/redirection)
