@@ -91,11 +91,13 @@ const Footer = () => {
                 <li>
                   <a href="/products/email-otp/">Email OTP</a>
                 </li>
-                {/* <!-- <li>
-                                                <a href="#">WebAuthn</a>
-                                            </li> --> */}
                 <li>
                   <a href="/products/social-login/">Social Login</a>
+                </li>
+                <li>
+                  <a href="/products/multi-factor-authentication/">
+                    Multi-Factor Authentication
+                  </a>
                 </li>
                 <li>
                   <a href="javascript: void(0)">
