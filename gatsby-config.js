@@ -23,11 +23,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://mojoauth.com/docs`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options:{
+        output: '/'
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
