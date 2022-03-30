@@ -114,6 +114,7 @@ mojoauth.signIn().then(response => console.log(response))
             redirect_url: "http://localhost:8080/test",
             source: [ {type:'phone',feature:'otp'} ],
         }
+    const mojoauth = new MojoAuth( "API_KEY", config);
     mojoauth.signIn().then( response => {
 
             console.log( response )
@@ -125,6 +126,6 @@ mojoauth.signIn().then(response => console.log(response))
 
 ## Keep Reading
 
-[How to Integrate Mailazy to your application?](/howto/email-whitelisting/)
+[How to handle MojoAuth token?](/howto/handle-jwt-token/)
 
-[How to add custom redirection to your application?](content/configurations/redirection)
+[How to add custom redirection to your application?](/configurations/redirection)

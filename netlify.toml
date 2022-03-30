@@ -17,3 +17,7 @@
 [[redirects]]
   from = "/docs/howto/asp.net/"
   to = "/docs/howto/asp-dot-net/"
+
+  [[redirects]]
+  from = "/docs/guides/android/"
+  to = "/docs/sdks/android/"
