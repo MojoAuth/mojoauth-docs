@@ -86,6 +86,29 @@ var resp = await mojoAuthHttpClient.VerifyOTP(stateId,otp);
 
 Console.WriteLine(resp.Result);
 ```
+### Send PhoneOTP
+
+Use the MojoAuth `SendPhoneOTP()` Method to send Phone OTP.
+
+```
+var phone = “+918947######”;  //Required
+var resp = await mojoAuthHttpClient.SendPhoneOTP(phone);
+
+Console.WriteLine(resp.Result);
+```
+
+### Verify PhoneOTP
+
+Use the MojoAuth `VerifyPhoneOTP()` Method to verify the OTP.
+
+```
+var stateId = “<state_id>”;  //Required
+var otp = “<otp>”;  //Required
+
+var resp = await mojoAuthHttpClient.VerifyPhoneOTP(stateId,otp);
+
+Console.WriteLine(resp.Result);
+```
 
 ### JWKS
 
