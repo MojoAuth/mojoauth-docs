@@ -1,12 +1,12 @@
 ---
-title: How to add Phone Login
-tags: ["Phone", "Login", "OTP"]
-description: "A quick implementation guide to configure Phone Login to authenticate your users."
+title: How to add SMS Authentication
+tags: ["Phone", "Login", "OTP", "SMS"]
+description: "A quick implementation guide to configure SMS Authentication to authenticate your users."
 ---
 
-# Get Started - Phone Login
+# Get Started - SMS Authentication
 
-This guide explains how to add and configure the Phone Login to your application using MojoAuth Dashboard. You can implement Phone Login for a quick and convenient approach for consumer registration and login.
+This guide explains how to add and configure the SMS Authentication to your application using MojoAuth Dashboard. You can implement SMS Authentication for a quick and convenient approach for consumer registration and login.
 
 ## Dashboard Configuration
 
@@ -28,7 +28,7 @@ Pick the SMS provider you want to integrate to your application.
 </div>
 <br/>
 
-#### Configure Phone Login
+#### Configure SMS Authentication
 
 Click on Add Integration and your Twilio configure if you have your credentials.
 
@@ -44,7 +44,7 @@ To add your Twilio credentials, click on setup guide and follow the instructions
 </div>
 <br/>
 
-## Integrate Phone Login
+## Integrate SMS Authentication
 
 To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in the head of your webpage and follow the mentioned steps:
 
@@ -91,7 +91,7 @@ config = {
 
 > MojoAuth passwordless login form will be rendered in the above div on your web page
 
-- Add the MojoAuth passwordless login using **Phone Login** with the following method. The response would be handled in .then() function.
+- Add the MojoAuth passwordless login using **SMS Authentication** with the following method. The response would be handled in .then() function.
 
 ```js
 mojoauth.signIn().then(response => console.log(response))
