@@ -100,8 +100,13 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/products/webauthn/">
+                    WebAuthn
+                  </a>
+                </li>
+                <li>
                   <a href="javascript: void(0)">
-                    Phone OTP<span>Coming Soon</span>
+                    SMS Authentication<span>Coming Soon</span>
                   </a>
                 </li>
               </ul>

@@ -21,3 +21,7 @@
   [[redirects]]
   from = "/docs/guides/android/"
   to = "/docs/sdks/android/"
+
+  [[redirects]]
+  from = "/docs/howto/phone-login/"
+  to = "/docs/howto/add-sms-authentication/"

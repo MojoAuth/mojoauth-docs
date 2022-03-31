@@ -200,9 +200,9 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/howto/phone-login/">
+                <Link to="/howto/add-sms-authentication/">
                   <img alt="" src="images/phone-otp.svg" width={20} />
-                  <span>Configure Phone Login</span>
+                  <span>Configure SMS Authentication</span>
                 </Link>
               </li>
             </ul>
