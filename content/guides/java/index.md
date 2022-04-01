@@ -100,7 +100,6 @@ mojoauth.signIn().then(response => console.log(response))
    </script>
   </head>
   <body>
-     <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
         const mojoauth = new MojoAuth("Your MojoAuth API Key", {
