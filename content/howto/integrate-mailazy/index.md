@@ -1,16 +1,16 @@
 ---
-title: Integrate Mailazy - White Lable Email
+title: Integrate Mailazy
 tags: ["Mailazy", "integration", "Email White Labeling"]
 description: "A quick implementation guide to configure Mailazy to send transactional email to your application users with custom sender name and email."
 ---
 
-# Integrate Mailazy - White Lable Email
+# Integrate Mailazy
 
-This document provides instructions to configure Mailazy integration for sending out transactional emails with custom sender name and email.
+This document provides instructions to configure Mailazy integration to send transactional emails with a custom sender name and email.
 
 ## MojoAuth Dashboard Configuration
 
-This section covers the required configurations that you need to perform in the MojoAuth Dashboard under Marketplace for configuring Mailazy integration.
+This section covers the required configurations you need to perform in the MojoAuth Dashboard under Marketplace to configure Mailazy integration.
 
 Log in to your MojoAuth Dashboard account, select your project and navigate to Marketplace.
   The following screen will appear:
@@ -41,9 +41,9 @@ Click the Create User button given next to your email id to create an Account.
 </div>
 <br/>
 
-> Note: Your account email id is prefilled here and you cannot change it. Also, it automatically creates a Mailazy account, if it does not exist for the given email address. An OTP will be sent to your email id.
+> Note: Your account email id is prefilled here and you cannot change it. It will send an OTP to your email address and also, it automatically creates a Mailazy account if it does not exist for the given email address.
 
-Enter OTP received on your email id and click the Verify button.
+Enter the OTP received on your email id and click the Verify button.
 
 <div style="text-align:center">
   <img src="/images/verify-otp.png" alt="MojoAuth" />
@@ -66,9 +66,9 @@ Enter your Domain Name and click the Add Domain button. The following screen wil
 
 Copy the CNAME records and update them on your Domain.
 
-> Sometimes it might take up to 24 hours to reflect the DNS changes. If verification fails, you should wait and verify later.
+> Sometimes, it might take up to 24 hours to reflect the DNS changes. If verification fails, you should wait and verify later.
 
-Click the Verify button to verify your domain.
+Click the Verify button to verify your Domain.
 
 
 <div style="text-align:center">
@@ -76,16 +76,16 @@ Click the Verify button to verify your domain.
 </div>
 <br/>
 
-Add your From Name and From Email which you want to use in sending Emails from Mailazy and click update.
+Add your From Name and From Email, which you want to use to send Emails from Mailazy and click update.
 
 <div style="text-align:center">
   <img src="/images/mail-name-update.png" alt="MojoAuth" />
 </div>
 <br/>
 
-> Upon configuration, MojoAuth will start sending white labeled transactional emails using Mailazy with given From Name and From Email Address.
+> Upon configuration, MojoAuth will start sending white-labeled transactional emails using Mailazy with the given From Name and Email Address.
 
-You can view your added integration under Configured Intergations.
+You can view your added integration under Configured Integrations.
 
 <div style="text-align:center">
   <img src="/images/configured.png" alt="MojoAuth" />
