@@ -15,8 +15,8 @@
   to = "/docs/howto/handle-jwt-token/"
 
 [[redirects]]
-  from = "/docs/howto/asp.net/"
-  to = "/docs/howto/asp-dot-net/"
+  from = "/docs/sdks/asp.net/"
+  to = "/docs/sdks/asp-dot-net/"
 
   [[redirects]]
   from = "/docs/guides/android/"

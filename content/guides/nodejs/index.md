@@ -37,7 +37,7 @@ Here you just need to follow three simple steps:
 
 ## Integrate MojoAuth
 
-To start Integrating MojoAuth in your web app, add MojoAuth javascript sdk in the head of your webpage and follow below mentioned steps:
+To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in the head of your webpage and follow the mentioned steps:
 
 ```js
 <script
@@ -46,13 +46,38 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript sdk in th
 ></script>
 ```
 
-1. Create MojoAuth instance with your api key
+1. Create MojoAuth instance with your api key and pass the source as an object.
 
 ```js
-const mojoauth = new MojoAuth("Your MojoAuth API Key")
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  source: [{ type: "email", feature: "magiclink" }],
+})
 ```
 
-2. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
+2. To login using Email OTP or SMS Authentication, just change the source object.
+
+```js
+source: [{ type: "email", feature: "otp" }]
+```
+
+**OR**
+
+```js
+source: [{ type: "phone", feature: "otp" }]
+```
+
+> You can also use multiple Authentication methods by passing multiple objects in source Array.
+
+```js
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  source: [
+    { type: "email", feature: "magiclink" },
+    { type: "phone", feature: "otp" },
+  ],
+})
+```
+
+3. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
 
 ```js
 <div id="mojoauth-passwordless-form"></div>
@@ -60,18 +85,10 @@ const mojoauth = new MojoAuth("Your MojoAuth API Key")
 
 > MojoAuth passwordless login form will be rendered in the above div on your web page
 
-3. Add the MojoAuth passwordless login using **Magic Link** with the following method. The response would be handled in .then() function.
+4. Add the MojoAuth passwordless login with the following method. The response would be handled in .then() function.
 
 ```js
-mojoauth.signInWithMagicLink().then(response => console.log(response))
-```
-
-**or**
-
-4. Add the MojoAuth passwordless login using **Email OTP** with the following method. The response would be handled in .then() function.
-
-```js
-mojoauth.signInWithEmailOTP().then(response => console.log(response))
+mojoauth.signIn().then(response => console.log(response))
 ```
 
 ## Example
@@ -86,9 +103,13 @@ mojoauth.signInWithEmailOTP().then(response => console.log(response))
      <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("Your MojoAuth API Key");
-        // Use signInWithEmailOTP() for authentication using Email OTP
-        mojoauth.signInWithMagicLink().then(response => console.log(response));
+        const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+          source: [{ type: "email", feature: "magiclink" }],
+        })
+        // Use source:[{type: "email", feature: "otp"}] for authentication using Email OTP
+        // Use source:[{type: "phone", feature: "otp"}] for authentication using SMS Authentication
+
+        mojoauth.signIn().then(response => console.log(response));
       </script>
 
   </body>
