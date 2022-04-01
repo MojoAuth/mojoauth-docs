@@ -4,7 +4,7 @@ tags: ["Mailazy", "integration", "Email White Labeling"]
 description: "A quick implementation guide to configure Mailazy to send transactional email to your application users with custom sender name and email."
 ---
 
-# Integrate Mailazy - White Lable Email
+# Integrate Mailazy
 
 This document provides instructions to configure Mailazy integration to send transactional emails with a custom sender name and email.
 
