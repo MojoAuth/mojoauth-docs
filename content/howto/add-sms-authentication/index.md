@@ -128,4 +128,6 @@ mojoauth.signIn().then(response => console.log(response))
 
 [How to handle MojoAuth token?](/howto/handle-jwt-token/)
 
-[How to add custom redirection to your application?](/configurations/redirection)
+[How to add custom redirection to your application?](/configurations/redirection/)
+
+[How to add Social Login for your application users?](/howto/social-login/)

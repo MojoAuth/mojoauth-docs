@@ -13,6 +13,9 @@ module.exports = {
       twitter: `mojoauth`,
     },
   },
+  // flags: {
+  //   THE_FLAG: false
+  // },
   plugins: [
     // `gatsby-plugin-netlify`,
     {
@@ -37,7 +40,7 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-sitemap",
-      options:{
+      options: {
         output: '/'
       }
     },
