@@ -188,7 +188,7 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/howto/email-whitelisting/">
+                <Link to="/howto/integrate-mailazy/">
                   <img alt="" src="images/mailazy.svg" width={20} />
                   <span>Integrate Mailazy</span>
                 </Link>

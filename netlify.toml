@@ -8,7 +8,7 @@
 
 [[redirects]]
   from = "/docs/dev-integrations/email-whitelisting/"
-  to = "/docs/howto/email-whitelisting/"
+  to = "/docs/howto/integrate-mailazy/"
 
 [[redirects]]
   from = "/docs/howto/jwt-token/"
@@ -25,3 +25,7 @@
   [[redirects]]
   from = "/docs/howto/phone-login/"
   to = "/docs/howto/add-sms-authentication/"
+
+  [[redirects]]
+  from = "/docs/howto/email-whitelisting/"
+  to = "/docs/howto/integrate-mailazy/"

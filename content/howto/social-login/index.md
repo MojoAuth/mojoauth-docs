@@ -183,6 +183,8 @@ We are working on more social login support. If you want a specific social login
 
 ## Keep Reading
 
-[How to Integrate Mailazy to your application?](/howto/email-whitelisting/)
+[How to Integrate Mailazy to your application?](/howto/integrate-mailazy/)
 
-[How to add redirection to your application?](content/configurations/redirection)
+[How to add SMS Authentication for your application users?](/howto/add-sms-authentication/)
+
+[How to add custom redirection to your application?](/configurations/redirection/)
