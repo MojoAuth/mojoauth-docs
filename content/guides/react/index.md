@@ -76,41 +76,68 @@ const [payload, setPayload] = React.useState(null)
 
 > You can manage your data/state using react core APIs like context and useState or with any of the state management frameworks like Redux, MobX etc for complex data structures.
 
-3. Create the MojoAuth instance using your API Key obtained from your MojoAuth dashboard.
+5. Create the MojoAuth instance using your API Key obtained from your MojoAuth dashboard in the Login component,and pass the source object.
 
 ```jsx
 React.useEffect(() => {
-  const mojoauth = new MojoAuth("Your MojoAuth API Key") // 👈 Specify your API KEY ID here
+  const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+    language: "language_code",
+    redirect_url: "your_redirect_url",
+    source: [{ type: "email", feature: "magiclink" }],
+  })
 }, [])
 ```
 
-4. Add the following div on your return function where you want the MojoAuth passwordless login form to be rendered.
+6. To login using Email OTP or SMS Authentication, just change the source object.
+
+```js
+{
+  language: 'language_code',
+  redirect_url: "your_redirect_url",
+  source: [{ type: "email", feature: "otp" }],
+})
+```
+
+**OR**
+
+```js
+{
+  language: 'language_code',
+  redirect_url: "your_redirect_url",
+  source: [{ type: "phone", feature: "otp" }],
+})
+```
+
+> You can also use multiple Authentication methods by passing multiple objects in source Array.
+
+```js
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  language: "language_code",
+  redirect_url: "your_redirect_url",
+  source: [
+    { type: "email", feature: "magiclink" },
+    { type: "phone", feature: "otp" },
+  ],
+})
+```
+
+7. Add the following div on your return function where you want the MojoAuth passwordless login form to be rendered.
 
 ```jsx
 <div id="mojoauth-passwordless-form"></div>
 ```
 
-> MojoAuth passwordless login form will be rendered in the above div on your web page
+> MojoAuth passwordless login form will be rendered in the above div on your web page.
 
-5. Add the MojoAuth passwordless login using **Magic Link** in the useEffect hook below the instance. Set the response to payload using setPayload in .then() function.
+8. Add the MojoAuth passwordless login in the useEffect hook below the instance. Set the response to payload using setPayload in .then() function.
 
 ```jsx
-mojoauth.signInWithMagicLink().then(payload => {
+mojoauth.signIn().then(payload => {
   setPayload(payload)
 })
 ```
 
-**or**
-
-6. Add the MojoAuth passwordless login using **Email OTP** in the useEffect hook below the instance. Set the response to payload using setPayload in .then() function.
-
-```jsx
-mojoauth.signInWithEmailOTP().then(payload => {
-  setPayload(payload)
-})
-```
-
-7. After you have been logged in, enable WebAuthn form will be rendered if you have enabled it in your MojoAuth dashboard.
+9. After you have been logged in, enable WebAuthn form will be rendered if you have enabled it in your MojoAuth dashboard.
 
 <div style="text-align:center">
   <img src="../../assets/common-images/webauthn.png" alt="Company" />
@@ -121,7 +148,7 @@ mojoauth.signInWithEmailOTP().then(payload => {
 
 The next time you log in, you will directly be prompted to enter the key/fingerprint. After verifying you will be logged in.
 
-8. Display the user data in JSON format using the payload state in the return function after the user is logged in.
+10. Display the user data in JSON format using the payload state in the return function after the user is successfully logged in.
 
 ```jsx
 <pre>{JSON.stringify(payload, null, 4)}</pre>
@@ -138,8 +165,15 @@ function App() {
 
   //  1 Initialize and show the form
   React.useEffect(() => {
-    const mojoauth = new MojoAuth("Your MojoAuth API Key") // 👈 Specify your API KEY ID here
-    mojoauth.signInWithMagicLink().then(payload => {
+    const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+      language: "language_code",
+      redirect_url: "your_redirect_url",
+      source: [
+        { type: "email", feature: "magiclink" },
+        { type: "phone", feature: "otp" },
+      ],
+    })
+    mojoauth.signIn().then(payload => {
       setPayload(payload)
     })
   }, [payload])

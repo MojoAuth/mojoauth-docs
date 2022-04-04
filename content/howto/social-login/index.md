@@ -85,25 +85,50 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 ></script>
 ```
 
-- Create MojoAuth instance with your api key
-
-```js
-const mojoauth = new MojoAuth("Your MojoAuth API Key")
-```
-
-- Pass the parameters for language selection and redirection URL
+1. Create MojoAuth instance with your api key and pass the source as an object.
 
 ```js
 const mojoauth = new MojoAuth("Your MojoAuth API Key", {
-  language: "language_code",
+  language: "your_language_code",
   redirect_url: "your_redirect_url",
+  source: [{ type: "email", feature: "magiclink" }],
 })
 ```
+
 > Localize your website according to a country or region, checkout [Localization](/configurations/localization/) guide for more details.
 
 > Redirect URL is a required parameter to configure social login in your application. [Whitelist your domain](/configurations/redirection/) to get social login working on your app.
 
-- Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
+2. To login using Email OTP or SMS Authentication, just change the source object.
+
+```js
+language: "your_language_code"
+redirect_url: "your_redirect_url"
+source: [{ type: "email", feature: "otp" }]
+```
+
+**OR**
+
+```js
+language: "your_language_code"
+redirect_url: "your_redirect_url"
+source: [{ type: "phone", feature: "otp" }]
+```
+
+> You can also use multiple Authentication methods by passing multiple objects in source Array.
+
+```js
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  language: "your_language_code",
+  redirect_url: "your_redirect_url",
+  source: [
+    { type: "email", feature: "magiclink" },
+    { type: "phone", feature: "otp" },
+  ],
+})
+```
+
+3. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
 
 ```js
 <div id="mojoauth-passwordless-form"></div>
@@ -111,21 +136,13 @@ const mojoauth = new MojoAuth("Your MojoAuth API Key", {
 
 > MojoAuth passwordless login form will be rendered in the above div on your web page
 
-- Add the MojoAuth passwordless login using **Magic Link** with the following method. The response would be handled in .then() function.
+4. Add the MojoAuth passwordless login with the following method. The response would be handled in .then() function.
 
 ```js
-mojoauth.signInWithMagicLink().then(response => console.log(response))
+mojoauth.signIn().then(response => console.log(response))
 ```
 
-**or**
-
-- Add the MojoAuth passwordless login using **Email OTP** with the following method. The response would be handled in .then() function.
-
-```js
-mojoauth.signInWithEmailOTP().then(response => console.log(response))
-```
-
-### Example
+## Example
 
 ```js
 <!DOCTYPE html>
@@ -134,13 +151,19 @@ mojoauth.signInWithEmailOTP().then(response => console.log(response))
    </script>
   </head>
   <body>
-     <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("Your MojoAuth API Key", {language:"en", redirect_url:"https://www.example.com"});
-        // Use signInWithEmailOTP() for authentication using Email OTP
-        mojoauth.signInWithMagicLink().then(response => console.log(response));
+        const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+          language: "your_language_code",
+          redirect_url: "your_redirect_url",
+          source: [{ type: "email", feature: "magiclink" }],
+        })
+        // Use source:[{type: "email", feature: "otp"}] for authentication using Email OTP
+        // Use source:[{type: "phone", feature: "otp"}] for authentication using SMS Authentication
+
+        mojoauth.signIn().then(response => console.log(response));
       </script>
+
   </body>
 </html>
 ```

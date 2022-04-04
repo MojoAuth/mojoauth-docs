@@ -53,22 +53,48 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 ></script>
 ```
 
-1. Create MojoAuth instance with your api key
-
-```js
-const mojoauth = new MojoAuth("Your MojoAuth API Key")
-```
-
-2. Pass optional parameters for language selection and redirection URL
+1. Create MojoAuth instance with your api key and pass the source as an object.
 
 ```js
 const mojoauth = new MojoAuth("Your MojoAuth API Key", {
   language: "language_code",
   redirect_url: "your_redirect_url",
+  source: [{ type: "email", feature: "magiclink" }],
 })
 ```
 
->Redirect URL is an optional parameter here, [whitelist your root domain](/configurations/redirection/) to get redirected on successful authentication.
+2. To login using Email OTP or SMS Authentication, just change the source object.
+
+```js
+{
+  language: 'language_code',
+  redirect_url: "your_redirect_url",
+  source: [{ type: "email", feature: "otp" }],
+})
+```
+
+**OR**
+
+```js
+{
+  language: 'language_code',
+  redirect_url: "your_redirect_url",
+  source: [{ type: "phone", feature: "otp" }],
+})
+```
+
+> You can also use multiple Authentication methods by passing multiple objects in source Array.
+
+```js
+const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  language: "language_code",
+  redirect_url: "your_redirect_url",
+  source: [
+    { type: "email", feature: "magiclink" },
+    { type: "phone", feature: "otp" },
+  ],
+})
+```
 
 3. Add the following div on your web page where you want the MojoAuth passwordless login form to be rendered
 
@@ -78,30 +104,11 @@ const mojoauth = new MojoAuth("Your MojoAuth API Key", {
 
 > MojoAuth passwordless login form will be rendered in the above div on your web page
 
-4. Add the MojoAuth passwordless login using **Magic Link** with the following method. The response would be handled in .then() function.
+4. Add the MojoAuth passwordless login with the following method. The response would be handled in .then() function.
 
 ```js
-mojoauth.signInWithMagicLink().then(response => console.log(response))
+mojoauth.signIn().then(response => console.log(response))
 ```
-
-**or**
-
-5. Add the MojoAuth passwordless login using **Email OTP** with the following method. The response would be handled in .then() function.
-
-```js
-mojoauth.signInWithEmailOTP().then(response => console.log(response))
-```
-
-6. After you have been logged in, enable WebAuthn form will be rendered.
-
-<div style="text-align:center">
-  <img src="../../assets/common-images/webauthn.png" alt="Company" />
-</div>
-<br/>
-
-You can enable webauthn here or you can skip it to log in to your web application. After enabling webauthn, the prompt to enter your Security Key/Fingerprint will appear. As soon as you enter your key/fingerprint, your device will be registered and you will be logged in.
-
-The next time you log in, you will directly be prompted to enter the key/fingerprint. After verifying you will be logged in.
 
 ## Example
 
@@ -112,18 +119,22 @@ The next time you log in, you will directly be prompted to enter the key/fingerp
    </script>
   </head>
   <body>
-     <h2>MojoAuth Demo </h2>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("Your MojoAuth API Key", {language:"en", redirect_url:"https://www.yourproject.com"});
-        // Use signInWithEmailOTP() for authentication using Email OTP
-        mojoauth.signInWithMagicLink().then(response => console.log(response));
+        const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+          language: 'language_code',
+          redirect_url: "your_redirect_url",
+          source: [{ type: "email", feature: "magiclink" }],
+        })
+        // Use source:[{type: "email", feature: "otp"}] for authentication using Email OTP
+        // Use source:[{type: "phone", feature: "otp"}] for authentication using SMS Authentication
+
+        mojoauth.signIn().then(response => console.log(response));
       </script>
 
   </body>
 </html>
 ```
-
 
 ## Mojouth Passwordless Login Flow
 
@@ -150,9 +161,11 @@ After completing the above steps the following will be the flow of passwordless 
 - If the user has passed the optional parameter 'redirect_url', they have to include the following function on their redirection page to get logged in directly.
 
 ```js
-const mojoauth = new MojoAuth( "Your MojoAuth API KEY" );
+const mojoauth = new MojoAuth("Your MojoAuth API KEY")
 
-    mojoauth.signInWithStateID().then( payload => {console.log(payload)});
+mojoauth.signInWithStateID().then(payload => {
+  console.log(payload)
+})
 ```
 
 ## Enabling WebAuthn for logged-in user
