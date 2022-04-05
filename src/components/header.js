@@ -136,8 +136,8 @@ export default class Header extends Component {
                           </a>
                         </li>
                         <li>
-                          <a href="javascript: void(0)">
-                            SMS Authentication<span>Coming Soon</span>
+                          <a href="/products/sms-authentication">
+                            SMS Authentication
                           </a>
                         </li>
                       </ul>
