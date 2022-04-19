@@ -342,7 +342,7 @@ try {
 
 * After generating KeyHash successfully, you need to setup below setting and fill the required fields e.g. Package Name & Class Name.
 
-**NOTE:** There's nothing special about the Intent object you use when starting an activity for a result, but you do need to pass an additional integer argument to the startActivityForResult() method. The integer argument is a "request code" that identifies your request. When you receive the result Intent, the callback provides the same request code so that your app can properly identify the result and determine how to handle it.
+> NOTE: There's nothing special about the Intent object you use when starting an activity for a result, but you do need to pass an additional integer argument to the startActivityForResult() method. The integer argument is a "request code" that identifies your request. When you receive the result Intent, the callback provides the same request code so that your app can properly identify the result and determine how to handle it.
 
 When the user is done with the subsequent activity and returns, the system calls your activity's onActivityResult() method.
 
