@@ -163,7 +163,7 @@ Use the MojoAuth `verifyToken()` Method to verify the MojoAuth JWT token.
 //Step 1 Get Public Key / Certificate from MojoAuth Server
 
 $result = $mojoAuth->getPublicKey();
-$publicKey = json_decode($result);
+$publicKey = json_decode($result['response']);
 
 //Step 2 Pass JWT token and publickey to verify user
 $userProfileData = $mojoAuth->getUserProfileData($access_token, $publicKey->data)
