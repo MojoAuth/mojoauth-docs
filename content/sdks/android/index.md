@@ -127,7 +127,7 @@ The following code will be used to implement Login By EmailOTP:<br><br>
 ```java
     public void loginByEmailOTP() {
         MojoAuthApi mojoAuthApi = new MojoAuthApi();
-        mojoAuthApi.loginByEmailOTP("<email>", new AsyncHandler<LoginResponse>() {
+        mojoAuthApi.loginByEmailOTP("<email>", "<language>", new AsyncHandler<LoginResponse>() {
             @Override
             public void onFailure(ErrorResponse error) {
                 Log.d("Error",error.getDescription());
