@@ -20,9 +20,9 @@ require_once(__DIR__."mojoAuthAPI.php");
 $mojoAuth = new mojoAuthAPI("Your MojoAuth API Key");
 ```
 
-### Verify JWT Token
+### Get User Profile Data
 
-Use the MojoAuth `verifyToken()` Method to verify the MojoAuth JWT token.
+Use the MojoAuth `getUserProfileData()` Method to get User Profile Data from MojoAuth JWT token.
 
 ```PHP
 
