@@ -131,9 +131,7 @@ export default class Header extends Component {
                           </a>
                         </li>
                         <li>
-                          <a href="/products/webauthn/">
-                            WebAuthn
-                          </a>
+                          <a href="/products/webauthn/">WebAuthn</a>
                         </li>
                         <li>
                           <a href="/products/sms-authentication">
@@ -157,8 +155,11 @@ export default class Header extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href="https://mojoauthassist.freshdesk.com/support/tickets/new">
-                      Support
+                    <a
+                      href="https://calendly.com/mojoauth-passwordless/30min"
+                      target="_blank"
+                    >
+                      Book a Demo
                     </a>
                   </li>
                   <li>
