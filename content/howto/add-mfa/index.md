@@ -4,7 +4,7 @@ tags: ["MFA", "Login", "OTP", "SMS","Magiclink"]
 description: "A quick implementation guide to configure MFA to authenticate your users."
 ---
 
-# Get Started - Social Login
+# Get Started - Multi Factor Authentication
 
 This guide explains how to add and configure MFA(multi factor authentication) on your application. You can implement MFA for a secure and convenient approach for consumer registration and login.
 
