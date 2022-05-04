@@ -193,7 +193,13 @@ input[type="button"] {
   font-weight: 400;
   font-size: 0.95rem;
 }
-
+#root{
+  max-width: 1536px;
+    margin: 0 auto;
+}
+.main{
+margin-top: 85px;
+}
 // container
 section,
 header,
