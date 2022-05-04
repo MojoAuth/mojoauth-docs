@@ -100,8 +100,9 @@ export default class Header extends Component {
           </svg>
         </a>
       </div>
-      <div class="navigation">
-        <ul>
+      <Search indices={searchIndices} />
+      <div class="navigation-wrap">
+        <ul class="navigation">
           <li id="products-dropdown">
             <label class="dropdown">
               <div class="dd-button">Products</div>
