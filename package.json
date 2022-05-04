@@ -42,6 +42,7 @@
     "react-instantsearch-dom": "^6.22.0",
     "react-modal": "^3.12.1",
     "styled-components": "^5.3.3",
+    "typeface-inter": "^3.18.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
