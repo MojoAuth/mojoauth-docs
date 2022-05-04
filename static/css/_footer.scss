@@ -127,6 +127,9 @@
             &.primary{
               background: $purple-70;
               color: $white;
+              svg{
+                margin: 0 0 0 2px;
+              }
             }
           }
         }
