@@ -4,7 +4,7 @@ import React from "react"
 
 const Layout = ({ location, title, children }) => {
   return (
-    <main>{children}</main>
+    <main className="main">{children}</main>
   )
 }
 

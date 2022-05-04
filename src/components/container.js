@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Middle = () => {
   return (
-    <main>
+    <main className="main">
       {/*Hero section*/}
       <section className="py-72">
         <div className="hero grid-40-60">

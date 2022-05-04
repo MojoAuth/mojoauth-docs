@@ -1,152 +1,183 @@
-footer {
-  p {
-    margin: 0;
-  }
-  .footer-top {
-    & > div {
-      position: relative;
-      &:before {
-        position: absolute;
-        content: "";
-        width: calc(100% - 48px);
-        height: 1px;
-        background-color: $coolGray-40;
-        top: 0;
-        left: 24px;
-      }
-      padding-top: 72px;
-      margin-bottom: 48px;
-      .logo-footer {
-        a {
-          display: block;
-          margin-bottom: 24px;
+
+  footer {
+    p {
+      margin: 0;
+    }
+    .footer-top {
+      & > div {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: calc(100% - 48px);
+          height: 1px;
+          background-color: $coolGray-40;
+          top: 0;
+          left: 24px;
         }
-        p {
-          margin-bottom: 24px;
-          max-width: 90%;
-          @media (max-width: 767px) {
-            max-width: 100%;
+        padding-top: 72px;
+        margin-bottom: 72px;
+        .footer-logo {
+          a {
+            display: block;
+            margin-bottom: 24px;
           }
-          @media (max-width: 767px) {
-            &:last-child {
-              margin-bottom: 0;
+          p {
+            font-size: 17px;
+            margin-bottom: 24px;
+            max-width: 90%;
+            @media (max-width: 767px) {
               max-width: 100%;
             }
-          }
-          span {
-            color: $purple-70;
+            @media (max-width: 767px) {
+              &:last-child {
+                margin-bottom: 0;
+                max-width: 100%;
+              }
+            }
+            span {
+              color: $purple-70;
+            }
           }
         }
-      }
-    }
-    .social-links {
-      display: flex;
-      a {
-        margin: 0 24px 0 0;
-        display: block;
-        color: $coolGray-70;
-        svg {
-          vertical-align: middle;
-        }
-        &:hover {
-          svg {
-            path {
-              fill: $purple-70-hover;
+        .footer-links {
+          display: flex;
+          flex-wrap: wrap;
+          & > div {
+            display: inline-block;
+            margin-right: 24px;
+            width: calc(50% - (24px * 1 / 2));
+            margin-bottom: 24px;
+            &:last-child {
+              margin-right: 0;
+            }
+            @media (max-width: 767px) {
+              margin: 0;
+              width: 100%;
             }
           }
         }
       }
-    }
-    h4 {
-      color: $coolGray-100;
-      font-weight: 500;
-      margin-bottom: 24px;
-      & ~ h4 {
-        margin-top: 48px;
-      }
-      @media (max-width: 1023px) {
-        margin-top: 48px;
-      }
-    }
-    ul {
-      li {
-        &:not(:last-child) {
-          margin-bottom: 24px;
-        }
+      .social-links {
+        display: flex;
         a {
-          font-weight: 400;
+          margin: 0 !important;
+          display: block;
           color: $coolGray-70;
-          font-size: 16px;
-          display: flex;
-          align-items: center;
+          transition: 0.3s all ease-in-out;
+          svg {
+            vertical-align: middle;
+            path {
+              transition: 0.3s all ease-in-out;
+            }
+          }
           &:hover {
-            color: $purple-70-hover;
+            svg {
+              path {
+                fill: $purple-70-hover;
+              }
+            }
           }
         }
-        span {
-          margin-left: 0.5rem;
-          background: $purple-70;
-          border-radius: 0.25rem;
-          padding: 0.2rem 0.5rem;
-          font-weight: 500;
-          font-size: 0.55rem;
-          line-height: 1;
-          color: $white;
-          text-transform: uppercase;
-        }
-      }
-      & ~ ul {
-        @media (max-width: 1024px) {
-          margin-bottom: 68px;
-        }
-      }
-    }
-  }
-  .footer-bottom {
-    background-color: $coolGray-10;
-    font-size: 16px;
-    & > div {
-      min-height: 70px;
-      @extend %space-between;
-      @media (max-width: 767px) {
-        flex-direction: column;
-        padding: 16px 0;
-        min-height: 88px;
-      }
-      & > div {
-        @media (max-width: 767px) {
-          &:first-child {
-            order: 3;
-          }
-          &:last-child {
-            order: 2;
-            margin: 12px 0;
-          }
-          &:nth-child(2) {
-            order: 1;
-          }
-        }
-      }
-    }
 
-    .link {
-      ul {
-        @extend %d-flex;
         li {
-          @extend %d-flex;
           &:not(:last-child) {
-            margin-right: 12px;
-            padding-right: 12px;
-            border-right: 1px solid $coolGray-70;
+            margin: 0 24px 0 0 !important;
+          }
+        }
+      }
+      h4 {
+        color: $coolGray-100;
+        font-weight: 500;
+        margin-bottom: 24px;
+        & ~ h4 {
+          margin-top: 48px;
+        }
+        @media (max-width: 992px) {
+          margin-top: 48px;
+        }
+      }
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 24px;
           }
           a {
+            font-weight: 400;
             color: $coolGray-70;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
             &:hover {
               color: $purple-70-hover;
             }
           }
+          span {
+            margin-left: 0.5rem;
+            background: $yellow;
+            border-radius: 0.25rem;
+            padding: 0.2rem 0.5rem;
+            font-weight: 500;
+            font-size: 0.55rem;
+            color: $coolGray-100;
+            text-transform: uppercase;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            &.primary{
+              background: $purple-70;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      background-color: $coolGray-10;
+      font-size: 16px;
+      & > div {
+        min-height: 70px;
+        @extend %space-between;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          padding: 16px 0;
+          min-height: 88px;
+        }
+        & > div {
+          @media (max-width: 767px) {
+            &:first-child {
+              order: 3;
+            }
+            &:last-child {
+              order: 2;
+              margin: 12px 0;
+            }
+            &:nth-child(2) {
+              order: 1;
+            }
+          }
+        }
+      }
+
+      .link {
+        ul {
+          @extend %d-flex;
+          li {
+            @extend %d-flex;
+            &:not(:last-child) {
+              margin-right: 12px;
+              padding-right: 12px;
+              border-right: 1px solid $coolGray-70;
+            }
+            a {
+              color: $coolGray-70;
+              font-weight: normal;
+              &:hover {
+                color: $purple-70-hover;
+              }
+            }
+          }
         }
       }
     }
   }
-}
