@@ -4,11 +4,15 @@ header {
   border-bottom: 1px solid $gray-lightest;
   box-shadow: 0 0px 4px 1px rgba(0, 0, 0, 0.06);
   position: fixed;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  position: relative;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1536px;
+    margin: 0 auto;
 
   //top strip
   .top-strip {
@@ -127,6 +131,15 @@ header {
                 }
               }
             }
+            &:hover{
+              .primary{
+                svg{
+                  path{
+                    stroke: $white;
+                  }
+                }
+              }
+          }
             &.btn {
               min-height: 38px;
               line-height: 38px;
@@ -152,16 +165,23 @@ header {
                 }
                 span {
                   margin-left: 0.5rem;
-                  background: $purple-70;
+                  background: $yellow;
                   border-radius: 0.25rem;
                   padding: 0.2rem 0.5rem;
                   font-weight: 500;
                   font-size: 0.55rem;
-                  color: $white;
+                  color: $coolGray-100;
                   text-transform: uppercase;
                   height: 16px;
                   display: flex;
                   align-items: center;
+                  &.primary{
+                    background: $purple-70;
+                    color: $white;
+                    svg{
+                      margin: 0 0 0 2px;
+                    }
+                  }
                 }
               }
               &:last-child {
@@ -200,12 +220,12 @@ header {
 @media (max-width: 992px) {
   #navcheck {
     opacity: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 62px;
     height: 85px;
-    z-index: 4;
+    z-index: 999;
     cursor: pointer;
     margin: 0;
     display: block;
@@ -283,10 +303,10 @@ input#navcheck:checked {
 }
 
 .nav-btn {
-  position: absolute;
+  position: fixed;
   right: 16px;
   top: 32px;
-  z-index: 3;
+  z-index: 99;
   @media (min-width: 993px) {
     display: none;
   }

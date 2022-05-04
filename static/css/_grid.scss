@@ -153,3 +153,26 @@
     }
   }
 }
+
+.grid-33-67 {
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    display: inline-block;
+    float: left;
+    margin-right: 24px;
+    width: calc(33% - (24px * 1 / 2));
+    &:nth-child(2n) {
+      margin-right: 0;
+      width: calc(67% - (24px * 1 / 2));
+      @media (max-width: 992px) {
+        margin-top: 24px;
+        width: 100%;
+      }
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

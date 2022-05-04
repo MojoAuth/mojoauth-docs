@@ -50,6 +50,8 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 
 ```js
 const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  language: "language_code",
+  redirect_url: "your_redirect_url",
   source: [{ type: "email", feature: "magiclink" }],
 })
 ```
@@ -57,19 +59,29 @@ const mojoauth = new MojoAuth("Your MojoAuth API Key", {
 2. To login using Email OTP or SMS Authentication, just change the source object.
 
 ```js
-source: [{ type: "email", feature: "otp" }]
+{
+  language: 'language_code',
+  redirect_url: "your_redirect_url",
+  source: [{ type: "email", feature: "otp" }],
+})
 ```
 
 **OR**
 
 ```js
-source: [{ type: "phone", feature: "otp" }]
+{
+  language: 'language_code',
+  redirect_url: "your_redirect_url",
+  source: [{ type: "phone", feature: "otp" }],
+})
 ```
 
 > You can also use multiple Authentication methods by passing multiple objects in source Array.
 
 ```js
 const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+  language: "language_code",
+  redirect_url: "your_redirect_url",
   source: [
     { type: "email", feature: "magiclink" },
     { type: "phone", feature: "otp" },
@@ -103,6 +115,8 @@ mojoauth.signIn().then(response => console.log(response))
      <div id="mojoauth-passwordless-form"></div>
       <script>
         const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+          language: 'language_code',
+          redirect_url: "your_redirect_url",
           source: [{ type: "email", feature: "magiclink" }],
         })
         // Use source:[{type: "email", feature: "otp"}] for authentication using Email OTP

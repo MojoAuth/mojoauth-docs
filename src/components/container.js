@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Middle = () => {
   return (
-    <main>
+    <main className="main">
       {/*Hero section*/}
       <section className="py-72">
         <div className="hero grid-40-60">
@@ -13,11 +13,11 @@ const Middle = () => {
             </h1>
             <div className="subtitle">
               {/* //eslint-disable-next-line @jsx-a11y/label-has-associated-control */}
-              <span >Objective</span>
+              <span>Objective</span>
               <p>
-                Create a passwordless authentication system for any organization,
-                where they can use our APIs to provide seamless auth experiences
-                and reduce security risks for their customer.
+                Create a passwordless authentication system for any
+                organization, where they can use our APIs to provide seamless
+                auth experiences and reduce security risks for their customer.
               </p>
               <div className="d-flex">
                 <a
@@ -55,12 +55,12 @@ const Middle = () => {
             </div>
           </div>
           <div className="vector">
-            <img alt="" src="images/hero-vector.png" />
+            <img alt="" src="images/hero-vector.svg" />
           </div>
         </div>
       </section>
       {/*Hero section*/}
-      <section id='integrations' className="application-guide py-72">
+      <section id="integrations" className="application-guide py-72">
         <div className="section-header">
           <h2>Application Guides</h2>
         </div>
@@ -162,7 +162,6 @@ const Middle = () => {
                   <span>Wordpress</span>
                 </Link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -174,7 +173,6 @@ const Middle = () => {
           <h2>Comprehensive Resources</h2>
         </div>
         <div className="grid-50">
-
           <div className="card">
             <div className="icon pink-big">
               <img alt="" src="images/other-resources.svg" />
@@ -235,7 +233,7 @@ const Middle = () => {
         </div>
       </section>
       {/* SDK References Section */}
-      <section id='libraries' className="sdk py-72">
+      <section id="libraries" className="sdk py-72">
         <div className="section-header">
           <h2>SDK References</h2>
         </div>
@@ -293,7 +291,9 @@ const Middle = () => {
                 <img alt="" src="images/visualstudio.svg" />
               </div>
               {/* <div className="tag">Coming Soon</div> */}
-              <h3 className="title"><span>Asp.net</span></h3>
+              <h3 className="title">
+                <span>Asp.net</span>
+              </h3>
             </Link>
           </div>
 
@@ -304,7 +304,6 @@ const Middle = () => {
             <div className="tag">Coming Soon</div>
             <h3 className="title">Python</h3>
           </div>
-
 
           <div className="card">
             <div className="icon">
