@@ -21,14 +21,19 @@ Get started with our [HTML and JS guide](/guides/html-and-js/), or check out our
 
 ## Supported Language
 
-| Language | Code |
-| :------- | :--- |
-| English  | en   |
-| Italian  | it   |
-| German   | de   |
-| French   | fr   |
-| Spanish  | es   |
-|Portuguese|pt    |
-|Russian   |ru    |
+| Language    | Code |
+| :-------    | :--- |
+| Arabic      | ar   |
+| Dutch       | nl   |
+| English     | en   |
+| Filipino    | ph   |
+| French      | fr   |
+| German      | de   |
+| Indonesian  | id   |
+| Italian     | it   |
+| Portuguese  | pt   |
+| Russian     | ru   |
+| Spanish     | es   |
+| Turkish     | tr   |
 
 We are working on more language support. If you didn't find yours, please raise a request [here](https://mojoauthassist.freshdesk.com/support/tickets/new).
