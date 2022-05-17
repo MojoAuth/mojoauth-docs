@@ -13,7 +13,7 @@ This document provides instructions to configure Mailazy integration to send tra
 This section covers the required configurations you need to perform in the MojoAuth Dashboard under Marketplace to configure Mailazy integration.
 
 Log in to your MojoAuth Dashboard account, select your project and navigate to Marketplace.
-  The following screen will appear:
+The following screen will appear:
 
 <div style="text-align:center">
   <img src="/images/marketplace.png" alt="MojoAuth" />
@@ -34,14 +34,14 @@ Click on Add Integration button to configure Mailazy as displayed in the below s
 </div>
 <br/>
 
-Click the Create User button given next to your email id to create an Account.
+Add your Mailazy credentials obtained from your [Mailazy Account](https://app.mailazy.com) and click update.
 
 <div style="text-align:center">
-  <img src="/images/create-account.png" alt="MojoAuth" />
+  <img src="/images/mailazy-credentials.png" alt="MojoAuth" />
 </div>
 <br/>
 
-> Note: Your account email id is prefilled here and you cannot change it. It will send an OTP to your email address and also, it automatically creates a Mailazy account if it does not exist for the given email address.
+<!-- > Note: Your account email id is prefilled here and you cannot change it. It will send an OTP to your email address and also, it automatically creates a Mailazy account if it does not exist for the given email address.
 
 Enter the OTP received on your email id and click the Verify button.
 
@@ -81,7 +81,7 @@ Add your From Name and From Email, which you want to use to send Emails from Mai
 <div style="text-align:center">
   <img src="/images/mail-name-update.png" alt="MojoAuth" />
 </div>
-<br/>
+<br/> -->
 
 > Upon configuration, MojoAuth will start sending white-labeled transactional emails using Mailazy with the given From Name and Email Address.
 
