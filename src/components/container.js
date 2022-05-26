@@ -84,6 +84,12 @@ const Middle = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/guides/angular/">
+                  <img alt="" src="images/angular.svg" width={20} />
+                  <span>Angular App</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/guides/nextjs/">
                   <img alt="" src="images/next-js.svg" width={20} />
                   <span>Next JS App</span>
