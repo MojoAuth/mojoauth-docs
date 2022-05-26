@@ -17,7 +17,7 @@ After signing in to your [MojoAuth Account](https://mojoauth.com/dashboard/overv
 <div style="text-align:center">
   <img src="./images/marketplace.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 #### Select Social Login Provider
 
@@ -26,14 +26,14 @@ Pick the social login you want to integrate to your application.
 <div style="text-align:center">
   <img src="./images/integrations.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 Depending on the social login you picked, the following screen will appear.
 
 <div style="text-align:center">
   <img src="./images/google-page.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 #### Configure Social Login
 
@@ -42,21 +42,21 @@ Click on Add Integration and configure your Social Login if you have your social
 <div style="text-align:center">
   <img src="./images/google-configuration-update.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 To get your ID and secret, click on setup guide and follow the instructions to obtain your access keys.
 
 <div style="text-align:center">
   <img src="./images/google-configuration-setup.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 Alternatively, you can also access the setup guide on the integration page under the tab Installation.
 
 <div style="text-align:center">
   <img src="./images/google-installation.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 #### Update the Key and Secret
 
@@ -65,16 +65,18 @@ After obtaining the access keys following the above steps, enter the access keys
 <div style="text-align:center">
   <img src="./images/google-configuration-update.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 Your Social login is now configured. You can see the configured social logins under configured Integrations on the marketplace page.
 
 <div style="text-align:center">
   <img src="./images/configured-integrations.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 ## Integrate Social Login
+
+To implement custom social login using browser API, read the [Custom Social Login doc.](/howto/add-custom-social-login)
 
 To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in the head of your webpage and follow the mentioned steps:
 
@@ -179,7 +181,7 @@ After completing the above steps the following will be the flow of passwordless 
 <div style="text-align:center">
   <img src="./images/google-passwordless-form.png" alt="Company" />
 </div>
-<br/>
+<br />
 
 - After a successful verification, user will be redirected to their application.
 
@@ -190,7 +192,7 @@ After completing the above steps the following will be the flow of passwordless 
 <div style="text-align:center">
   <img src="../../assets/common-images/magic-link.png" alt="Magic Link" />
 </div>
-<br/>
+<br />
 
 ## Supported Social Providers
 
