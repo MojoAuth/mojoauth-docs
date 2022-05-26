@@ -44,7 +44,7 @@ Here you just need to follow three simple steps:
 
 ## Integrate MojoAuth
 
-To start Integrating MojoAuth, we need to install angular CLI for creating an Angular app.
+To start Integrating MojoAuth, we need to install Angular CLI for creating an Angular app.
 
 ```
 npm install -g @angular/cli
