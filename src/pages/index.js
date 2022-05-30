@@ -12,8 +12,8 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
         <p>
-          No blog posts found. Add markdown posts to "content" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
+          No blog posts found. Add markdown posts to "content" (or the directory
+          you specified for the "gatsby-source-filesystem" plugin in
           gatsby-config.js).
         </p>
       </Layout>
@@ -21,10 +21,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout
-      location={location}
-      title={siteTitle}
-    >
+    <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -81,6 +78,15 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+        }
+      }
+    }
+    allMdx {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
         }
       }
     }

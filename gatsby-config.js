@@ -25,6 +25,7 @@ module.exports = {
         name: `content`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -41,8 +42,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        output: '/'
-      }
+        output: "/",
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -65,7 +66,7 @@ module.exports = {
             options: {
               fromHeading: 1,
               toHeading: 2,
-              className: "table-of-contents"
+              className: "table-of-contents",
             },
           },
           `gatsby-remark-autolink-headers`,
@@ -159,10 +160,10 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require("./src/utils/algolia-queries")
+        queries: require("./src/utils/algolia-queries"),
       },
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
   ],
   pathPrefix: `/docs`,
 }
