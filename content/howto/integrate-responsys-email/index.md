@@ -46,20 +46,20 @@ The very first REST API request needs to authenticate to a specific Responsys ac
 </div>
 <br/>
 
-This is the sample request body we send for you to customise for your individual user.
+This is the sample request body we send to your campaign. You can access the magiclink using the MOJO_LINK variable.
 
 ```json
 "mergeTriggerRecordData": {
           "mergeTriggerRecords": [
               {
                   "fieldValues": [
-                      "helen.lillard@oracle.com",
+                      "example@mojoauth.com",
                       "I"
                   ],
                   "optionalData": [
                   {
                       "name": "MOJO_LINK",
-                      "value": "https://www.sample.com"
+                      "value": "https://api.mojoauth.com/users/magiclink/verify?api_key=xxxxxxxxx&state_id=xxxxxxxxx&magictext=xxxxxxxxxx"
                   },
               ]
 
@@ -73,7 +73,7 @@ This is the sample request body we send for you to customise for your individual
       },
 ```
 
-## Integrate SMS Authentication
+## Integrate Email Authentication
 
 To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in the head of your webpage and follow the mentioned steps:
 
@@ -90,7 +90,7 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 config = {
   language: "en",
   redirect_url: "http://localhost:8080/test",
-  source: [{ type: "phone", feature: "otp" }],
+  source: [{ type: "email", feature: "magiclink" }],
 }
 
 const mojoauth = new MojoAuth("Your API Key", config)
@@ -106,8 +106,8 @@ config = {
   language: "en",
   redirect_url: "http://localhost:8080/test",
   source: [
-    { type: "phone", feature: "otp" },
     { type: "email", feature: "magiclink" },
+    { type: "phone", feature: "otp" },
   ],
 }
 ```
@@ -140,7 +140,7 @@ mojoauth.signIn().then(response => console.log(response))
     config = {
             language: "en",
             redirect_url: "http://localhost:8080/test",
-            source: [ {type:'phone',feature:'otp'} ],
+            source: [ { type : 'email' , feature : 'magiclink' } ],
         }
     const mojoauth = new MojoAuth( "API_KEY", config);
     mojoauth.signIn().then( response => {

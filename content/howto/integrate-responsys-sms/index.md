@@ -46,14 +46,14 @@ The very first REST API request needs to authenticate to a specific Responsys ac
 </div>
 <br/>
 
-This is the sample request body we send for you to customise for your individual user.
+This is the sample request body we send to your campaign. You can access the OTP using the MOJO_CODE variable.
 
 ```json
 "mergeTriggerRecordData": {
           "mergeTriggerRecords": [
               {
                   "fieldValues": [
-                      "13478046509",
+                      "12347200033",
                       "US",
                       "O"
                   ],
