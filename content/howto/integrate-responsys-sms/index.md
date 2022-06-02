@@ -6,7 +6,7 @@ description: "A quick implementation guide to configure SMS Authentication to au
 
 # Get Started - Integrate Oracle Responsys SMS
 
-This guide explains how to add and configure the Oracle Responsys SMS to your application using MojoAuth Dashboard. You can implement SMS Authentication using responsys SMS for a quick and convenient approach for consumer registration and login.
+This guide explains adding and configuring the Oracle Responsys SMS to your application using MojoAuth Dashboard. You can implement SMS Authentication using Responsys SMS for a quick and convenient consumer registration and login approach.
 
 ## Dashboard Configuration
 
@@ -21,7 +21,7 @@ After signing in to your [MojoAuth Account](https://mojoauth.com/dashboard/overv
 
 #### Select Responsys SMS Provider
 
-Pick the SMS provider you want to integrate to your application.
+Pick the SMS provider you want to integrate into your application.
 
 <div style="text-align:center">
   <img src="./images/integrations.png" alt="Company" />
@@ -39,14 +39,14 @@ Click on Add Integration to configure Responsys SMS.
 
 To get your Responsys SMS credentials, create your campaign on Oracle Responsys SMS.
 
-The very first REST API request needs to authenticate to a specific Responsys account using a username and a password or certificates. Enter your Campaign Name, Username and password to allow MojoAuth to send transactional SMS to your users.
+The first REST API request needs to authenticate to a specific Responsys account using a username and a password or certificates. Enter your Campaign Name, Username and password to allow MojoAuth to send transactional SMS to your users.
 
 <div style="text-align:center">
   <img src="./images/responsys-sms-credentials.png" alt="Company" />
 </div>
 <br/>
 
-This is the sample request body we send to your campaign. You can access the OTP using the MOJO_CODE variable.
+Below is the sample request body we send to your campaign. You can access the OTP using the MOJO_CODE variable.
 
 ```json
 "mergeTriggerRecordData": {
@@ -86,7 +86,7 @@ To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in th
 ></script>
 ```
 
-- Create MojoAuth instance with your apikey
+- Create a MojoAuth instance with your apikey
 
 ```js
 config = {
@@ -101,7 +101,7 @@ mojoauth.signIn().then(response => console.log(response))
 
 > Localize your website according to a country or region, checkout [Localization](/configurations/localization/) guide for more details.
 
-> In case of multiple sources required, just pass the source in the array.
+> In case multiple sources are required, just pass the source in the array.
 
 ```js
 config = {
@@ -122,7 +122,7 @@ config = {
 
 > MojoAuth passwordless login form will be rendered in the above div on your web page
 
-- Add the MojoAuth passwordless login using **SMS Authentication** with the following method. The response would be handled in .then() function.
+- Add the MojoAuth passwordless login using **SMS Authentication** with the following method. The response would be handled in the .then() function.
 
 ```js
 mojoauth.signIn().then(response => console.log(response))
