@@ -6,7 +6,7 @@ description: "A quick implementation guide to configure Oracle Responsys Email t
 
 # Get Started - Oracle Responsys Email
 
-This guide explains how to add and configure the Oracle Responsys Email to your application using MojoAuth Dashboard. You can implement Email Authentication using responsys Email for a quick and convenient approach for consumer registration and login.
+This guide explains adding and configuring the Oracle Responsys Email to your application using MojoAuth Dashboard. You can implement Email Authentication using Responsys Email for a quick and convenient consumer registration and login approach.
 
 ## Dashboard Configuration
 
@@ -21,7 +21,7 @@ After signing in to your [MojoAuth Account](https://mojoauth.com/dashboard/overv
 
 #### Select Responsys Email Provider
 
-Pick the Email provider you want to integrate to your application.
+Pick the Email provider you want to integrate into your application.
 
 <div style="text-align:center">
   <img src="./images/integrations.png" alt="Company" />
@@ -39,14 +39,14 @@ Click on Add Integration to configure Responsys Email.
 
 To get your Responsys Email credentials, create your campaign on Oracle Responsys Email.
 
-The very first REST API request needs to authenticate to a specific Responsys account using a username and a password or certificates. Enter your Campaign Name, Username and password to allow MojoAuth to send transactional Email to your users.
+The very first REST API request needs to authenticate to a specific Responsys account using a username and a password or certificates. Enter your Campaign Name, Username and password to allow MojoAuth to send transactional Emails to your users.
 
 <div style="text-align:center">
   <img src="./images/responsys-email-credentials.png" alt="Company" />
 </div>
 <br/>
 
-This is the sample request body we send to your campaign. You can access the magiclink using the MOJO_LINK variable.
+This is the sample request body we send to your campaign. You can access the magic link using the MOJO_LINK variable.
 
 ```json
 "mergeTriggerRecordData": {
@@ -75,7 +75,7 @@ This is the sample request body we send to your campaign. You can access the mag
 
 ## Integrate Email Authentication
 
-To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK in the head of your webpage and follow the mentioned steps:
+To start Integrating MojoAuth in your web app, add MojoAuth javascript SDK at the head of your webpage and follow the mentioned steps:
 
 ```js
 <script
@@ -99,7 +99,7 @@ mojoauth.signIn().then(response => console.log(response))
 
 > Localize your website according to a country or region, checkout [Localization](/configurations/localization/) guide for more details.
 
-> In case of multiple sources required, just pass the source in the array.
+> In case multiple sources are required, pass the source in the array.
 
 ```js
 config = {
@@ -118,9 +118,9 @@ config = {
 <div id="mojoauth-passwordless-form"></div>
 ```
 
-> MojoAuth passwordless login form will be rendered in the above div on your web page
+> MojoAuth passwordless login form will be rendered in the above div on your web page.
 
-- Add the MojoAuth passwordless login using **SMS Authentication** with the following method. The response would be handled in .then() function.
+- Add the MojoAuth passwordless login using **SMS Authentication** with the following method. The response would be handled in the .then() function.
 
 ```js
 mojoauth.signIn().then(response => console.log(response))
