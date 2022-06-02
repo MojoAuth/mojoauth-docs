@@ -209,6 +209,18 @@ const Middle = () => {
                   <span>Configure SMS Authentication</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/howto/integrate-responsys-email/">
+                  <img alt="" src="images/responsys.png" width={20} />
+                  <span>Integrate Oracle Responsys Email</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/howto/integrate-responsys-sms/">
+                  <img alt="" src="images/responsys.png" width={20} />
+                  <span>Integrate Oracle Responsys SMS</span>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="card">
