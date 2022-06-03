@@ -120,7 +120,7 @@ config = {
 
 > MojoAuth passwordless login form will be rendered in the above div on your web page.
 
-- Add the MojoAuth passwordless login using **SMS Authentication** with the following method. The response would be handled in the .then() function.
+- Add the MojoAuth passwordless login using **Email Authentication** with the following method. The response would be handled in the .then() function.
 
 ```js
 mojoauth.signIn().then(response => console.log(response))
