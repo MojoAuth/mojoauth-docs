@@ -170,13 +170,38 @@ mojoauth.signInWithStateID().then(payload => {
 
 ## Enabling WebAuthn for logged-in user
 
-- If the user skips enabling webauthn for the first time, 'Enable webauthn' function can be used to trigger webauthn registration once they have logged in
+- If the user skips enabling webauthn for the first time, 'Enable webauthn' function can be used to trigger webauthn registration once they have logged in.
+
+Please check the code below for enableWebauthn function:
 
 ```js
-mojoauth.enableWebauthn(payload.oauth.access_token)
+mojoauth
+  .enableWebauthn(response.oauth.access_token)
+  .then(response => {
+    // success
+    console.log(response)
+  })
+  .catch(e => {
+    // handle the cancellation of webauthn
+    console.log(e)
+  })
 ```
 
-- Access token would be available in the payload after successful login.
+or if you use await, try the below code-
+
+```js
+try {
+  var data = await mojoauth.enableWebauthn(response.oauth.access_token)
+  if (data.authenticated) {
+    console.log("WebAuthn is Registered")
+  }
+} catch (error) {
+  // handle the registration/login cancel
+  console.log(error)
+}
+```
+
+- Access token would be available in the payload under oauth after successful login.
 
 ## Keep Reading
 
