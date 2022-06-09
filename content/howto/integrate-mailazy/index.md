@@ -83,9 +83,9 @@ Add your From Name and From Email, which you want to use to send Emails from Mai
 </div>
 <br/> -->
 
-> Upon configuration, MojoAuth will start sending white-labeled transactional emails using Mailazy with the given From Name and Email Address.
+> Upon configuration, you just need to enable your integration and MojoAuth will start sending white-labeled transactional emails using Mailazy with the given From Name and Email Address.
 
-You can view your added integration under Configured Integrations.
+You can view your added integration under Configured Integrations. Don't forget to enable your integration after you have configured it.
 
 <div style="text-align:center">
   <img src="/images/configured.png" alt="MojoAuth" />

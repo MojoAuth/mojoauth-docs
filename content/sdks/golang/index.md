@@ -66,7 +66,7 @@ Add the following config object in the `main.go` file:
     cfg := go_mojoauth.Config{
         ApiKey:    "MojoAuth API Key"
     }
-    mojoClient, err := go_mojoauth.NewMojoAuth(&cfg, map[string]string{"token": "Enter your mojoauth token"})
+    mojoClient, err := go_mojoauth.NewMojoAuth(&cfg)
     if err != nil {
         errors = errors + err.(mojoerror.Error).OrigErr().Error()
         //      respCode = 500
