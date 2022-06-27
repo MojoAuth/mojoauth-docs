@@ -14,7 +14,7 @@ To communicate with MojoAuth you will need some details about the application. T
 
 Here you just need to follow three simple steps:
 
-- Login to [MojoAuth](https://mojoauth.com/signin) Dashboard:
+- Login to [MojoAuth](https://mojoauth.com/dashboard/signin) Dashboard:
 
 <div style="text-align:center">
   <img src="../../assets/common-images/login.png" alt="MojoAuth" />
@@ -151,7 +151,7 @@ After completing the above steps the following will be the flow of passwordless 
 
 ## MojoAuth Token
 
-After successful authentication, MojoAuth provides a JWT Token. You can use this token for your further implementation. MojoAuth also provides the way you can verify the authenticity of this token using MojoAuth NodeJS SDK.
+After successful authentication, MojoAuth provides a JWT Token. You can use this token for your further implementation. MojoAuth also provides the way you can verify the authenticity of this token using MojoAuth Golang SDK.
 
 ## Setup Golang
 
@@ -214,7 +214,7 @@ Add the following config object in the `main.go` file:
     cfg := go_mojoauth.Config{
     ApiKey:    "MojoAuth API Key"
   }
-    mojoClient, err := go_mojoauth.NewMojoAuth(&cfg, map[string]string{"token": "Enter your mojoauth token"})
+    mojoClient, err := go_mojoauth.NewMojoAuth(&cfg)
   if err != nil {
     errors = errors + err.(mojoerror.Error).OrigErr().Error()
     //    respCode = 500

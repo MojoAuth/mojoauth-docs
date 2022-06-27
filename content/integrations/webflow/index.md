@@ -12,7 +12,7 @@ To use MojoAuth in your application, you will need an account and some credentia
 
 Here you just need to follow three simple steps:
 
-- Login to [MojoAuth](https://mojoauth.com/signin) Dashboard:
+- Login to [MojoAuth](https://mojoauth.com/dashboard/signin) Dashboard:
 
 <div style="text-align:center">
   <img src="../../assets/common-images/login.png" alt="MojoAuth" />
@@ -62,9 +62,14 @@ Copy-paste the below-mentioned code in the `Before </body> tag` section of custo
 ```JS
 <script>
   const apikey = "<Add Your API Key>";
-  const mojoauth = new MojoAuth(apikey);
-  // Use signInWithEmailOTP() for authentication using Email OTP
-  mojoauth.signInWithMagicLink().then(response => {
+  const config = {
+          language: 'language_code',
+          source: [{ type: "email", feature: "magiclink" }],
+        }
+  const mojoauth = new MojoAuth(apikey, config);
+  // You can change the source feature to 'otp' for login with OTP
+  // source: [{ type: "email", feature: "otp" }]
+  mojoauth.signIn().then(response => {
   		alert("Please check console to see profile data");
       console.log(response);
       // save the userData in local storage
@@ -83,6 +88,8 @@ Copy-paste the below-mentioned code in the `Before </body> tag` section of custo
 <br/>
 
 **Note:** In the above code, replace the `<Add Your API Key>` with your project's API Key. You can find your API Key in MojoAuth Dashboard.
+
+**Note:** You can localize your website according to a country or region by changing the language in the config object.
 
 The above code will render the MojoAuth login form. Once the user gets authenticated, it will redirect the user to the protected page while saving the user's access token in the local storage.
 

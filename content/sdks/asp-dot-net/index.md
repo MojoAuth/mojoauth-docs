@@ -35,11 +35,15 @@ This section contains a list of all APIs.
 Use the MojoAuth `SendMagicLink()` Method to send magic link on the email.
 
 ```
-var email = “abc@abc.com”;  //Required
-var resp = await mojoAuthHttpClient.SendMagicLink(email);
+var email = "example@yourdomain.com";  //Required
+var redirect_url = "https://example.com/admin/dashboad";  //Optional
+var lang = "en";  //Optional
+var resp = await mojoAuthHttpClient.SendMagicLink(email, redirect_url, lang);
 
 Console.WriteLine(resp.Result);
 ```
+
+> Check out the [custom redirection](https://mojoauth.com/docs/configurations/redirection/) and [localization](https://mojoauth.com/docs/configurations/localization/) guide for more details about these optional params.
 
 ### Check Authentication status
 
