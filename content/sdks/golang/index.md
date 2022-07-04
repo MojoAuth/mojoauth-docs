@@ -80,11 +80,11 @@ Add the calling of the `SigninWithMagicLink()` function and pass the Email and o
 
 ```go
     body := map[string]string{
-        "email" : "<Your Email>",
+        "email" : "Your Email",
     }
     queryParams := map[string]string{
-        "language" : "<Your language>",
-        "redirect_url" : "<Your redirect URL>",
+        "language" : "Your language",
+        "redirect_url" : "Your redirect URL",
     }
     res, err := api.Mojoauth{mojoClient}.SigninWithMagicLink(body, queryParams)
 	if err != nil {
@@ -107,7 +107,7 @@ Add the calling of the `PingStatus()` function and pass the state id received fr
 ```go
 
     body := map[string]string{
-        "state_id" : "<Your StateID>",
+        "state_id" : "Your StateID",
     }
     res, err := api.Mojoauth{mojoClient}.PingStatus(body)
 	if err != nil {
@@ -129,7 +129,7 @@ Add the calling of the `ResendMagicLink()` function and pass the state id receiv
 
 ```go
     body := map[string]string{
-        "state_id" : "<Your StateID>",
+        "state_id" : "Your StateID",
     }
     res, err := api.Mojoauth{mojoClient}.ResendMagicLink(body)
 	if err != nil {
@@ -152,10 +152,10 @@ Add the calling of the `SigninWithEmailOTP()` function and pass the Email and op
 ```go
 
     body := map[string]string{
-        "email" : "<Your Email>",
+        "email" : "Your Email",
     }
     queryParams := map[string]string{
-        "language" : "<Your language>",
+        "language" : "Your language",
     }
 
     res, err := api.Mojoauth{mojoClient}.SigninWithEmailOTP(body,queryParams)
@@ -179,8 +179,8 @@ Add the calling of the `VerifyEmailOTP()` function and pass the OTP and state id
 ```go
 
     body := map[string]string{
-        "state_id" : "<Your StateID>",
-        "otp" : "<Your OTP>",
+        "state_id" : "Your StateID",
+        "otp" : "Your OTP",
     }
     res, err := api.Mojoauth{mojoClient}.VerifyEmailOTP(body)
 	if err != nil {
@@ -204,7 +204,7 @@ Add the calling of the `ResendEmailOTP()` function and pass the state id receive
 
 
     body := map[string]string{
-        "state_id" : "<Your StateID>",
+        "state_id" : "Your StateID",
     }
     res, err := api.Mojoauth{mojoClient}.ResendEmailOTP(body)
 	if err != nil {
@@ -227,10 +227,10 @@ Add the calling of the `SigninWithPhoneOTP()` function and pass the phone number
 ```go
 
     body := map[string]string{
-        "phone" : "<Your Phone>", //Your Phone number with country code included ex. +1XXXXXXXXXX
+        "phone" : "Your Phone", // pass the phone number in the international format e.g for US, +1XXXXXXXXXX
     }
     queryParams := map[string]string{
-        "language" : "<Your language>",
+        "language" : "Your language",
     }
     res, err := api.Mojoauth{mojoClient}.SigninWithPhoneOTP(body, queryParams)
 	if err != nil {
@@ -253,8 +253,8 @@ Add the calling of the `VerifyPhoneOTP()` function and pass the OTP and state id
 ```go
 
     body := map[string]string{
-        "state_id" : "<Your StateID>",
-        "otp" : "<Your OTP>",
+        "state_id" : "Your StateID",
+        "otp" : "Your OTP",
     }
     res, err := api.Mojoauth{mojoClient}.VerifyPhoneOTP(body)
 	if err != nil {
@@ -277,7 +277,7 @@ Add the calling of the `ResendPhoneOTP()` function and pass the state id receive
 ```go
 
     body := map[string]string{
-        "state_id" : "<Your StateID>",
+        "state_id" : "Your StateID",
     }
     res, err := api.Mojoauth{mojoClient}.ResendPhoneOTP(body)
 	if err != nil {
@@ -298,7 +298,7 @@ Add the calling of the `ResendPhoneOTP()` function and pass the state id receive
 Add the calling of the `VerifyToken()` function and pass the MojoAuth JWT Token to verify the token.
 
 ```go
-    res, err := api.Mojoauth{mojoClient}.VerifyToken("<Enter Token>")
+    res, err := api.Mojoauth{mojoClient}.VerifyToken("Enter Token")
 	if err != nil {
 		errors = errors + err.(mojoerror.Error).OrigErr().Error()
 		//		respCode = 500

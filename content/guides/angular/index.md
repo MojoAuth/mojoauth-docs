@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
 ```jsx
 ngOnInit():void{
 
-    const mojoauth = new MojoAuth("71736bb0-8a9b-4f4d-8503-62355cfb030b", {
+    const mojoauth = new MojoAuth("APIKEY", {
       source: [{ type: "email", feature: "magiclink" }],
     });
     mojoauth.signIn().then((response:any) => {
