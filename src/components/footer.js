@@ -151,6 +151,9 @@ const Footer = () => {
                 <li>
                   <a href="/pricing/">Pricing</a>
                 </li>
+                <li>
+                  <a href="https://angel.co/company/mojoauth/jobs">Careers</a>
+                </li>
               </ul>
             </div>
           </div>

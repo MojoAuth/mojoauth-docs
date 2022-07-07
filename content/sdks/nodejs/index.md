@@ -50,7 +50,7 @@ Upon installation, you will find MojoAuth Node.js SDK under the node module.
 
 ```js
 var config = {
-  apiKey: "<Your API Key>",
+  apiKey: "Your API Key",
 }
 
 var ma = require("mojoauth-sdk")(config)
@@ -61,10 +61,10 @@ var ma = require("mojoauth-sdk")(config)
 Add the calling of the `SigninWithMagicLink()` function and pass the Email and optional query parameters to send the magiclink.
 
 ```js
-let email = "<Your Email>"
+let email = "Your Email"
 let query = {}
-query.language = "<Your language>"
-query.redirect_url = "<Your redrect URL>"
+query.language = "Your language"
+query.redirect_url = "Your redirect URL"
 
 ma.mojoAPI
   .signinWithMagicLink(email, query)
@@ -81,7 +81,7 @@ ma.mojoAPI
 Add the calling of the `PingStatus()` function and pass the state id received from the `SigninWithMagicLink()` function.
 
 ```js
-let state_id = "<Your StateID>"
+let state_id = "Your StateID"
 
 ma.mojoAPI
   .pingStatus(state_id)
@@ -98,10 +98,10 @@ ma.mojoAPI
 Add the calling of the `ResendMagicLink()` function and pass the state id received from the `SigninWithMagicLink()` function.
 
 ```js
-let email = "<Your Email>"
+let state_id = "Your State ID"
 let query = {}
-query.language = "<Your language>"
-query.redirect_url = "<Your redrect URL>"
+query.language = "Your language"
+query.redirect_url = "Your redirect URL"
 
 ma.mojoAPI
   .resendMagicLink(state_id, query)
@@ -118,9 +118,9 @@ ma.mojoAPI
 Add the calling of the `SigninWithEmailOTP()` function and pass the Email and optional query parameters to send the OTP.
 
 ```js
-let email = "<Your Email>"
+let email = "Your Email"
 let query = {}
-query.language = "<Your language>"
+query.language = "Your language"
 
 ma.mojoAPI
   .signinWithEmailOTP(email, query)
@@ -137,8 +137,8 @@ ma.mojoAPI
 Add the calling of the `VerifyEmailOTP()` function and pass the OTP and state id received from the `SigninWithEmailOTP()` function.
 
 ```js
-let state_id = "<Your StateID>"
-let otp = "<Your OTP>"
+let state_id = "Your StateID"
+let otp = "Your OTP"
 
 ma.mojoAPI
   .verifyEmailOTP(otp, state_id)
@@ -155,9 +155,9 @@ ma.mojoAPI
 Add the calling of the `ResendEmailOTP()` function and pass the state id received from the `SigninWithEmailOTP()` function.
 
 ```js
-let email = "<Your Email>"
+let state_id = "Your State ID"
 let query = {}
-query.language = "<Your language>"
+query.language = "Your language"
 
 ma.mojoAPI
   .resendEmailOTP(state_id, query)
@@ -174,9 +174,9 @@ ma.mojoAPI
 Add the calling of the `SigninWithPhoneOTP()` function and pass the phone number and optional query parameters to send the OTP.
 
 ```js
-let phone = "<Your Phone>" //
+let phone = "Your Phone" // pass the phone number in the international format e.g for US, +1XXXXXXXXXX
 let query = {}
-query.language = "<Your language>"
+query.language = "Your language"
 
 ma.mojoAPI
   .signinWithPhoneOTP(phone, query)
@@ -193,8 +193,8 @@ ma.mojoAPI
 Add the calling of the `VerifyPhoneOTP()` function and pass the OTP and state id received from the `SigninWithPhoneOTP()` function.
 
 ```js
-let state_id = "<Your StateID>"
-let otp = "<Your OTP>"
+let state_id = "Your StateID"
+let otp = "Your OTP"
 
 ma.mojoAPI
   .verifyPhoneOTP(otp, state_id)
@@ -211,9 +211,9 @@ ma.mojoAPI
 Add the calling of the `ResendPhoneOTP()` function and pass the state id received from the `SigninWithPhoneOTP()` function.
 
 ```js
-let phone = "<Your phone>"
+let state_id = "Your State ID"
 let query = {}
-query.language = "<Your language>"
+query.language = "Your language"
 
 ma.mojoAPI
   .resendPhoneOTP(state_id, query)
