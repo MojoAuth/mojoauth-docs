@@ -141,7 +141,10 @@ const Footer = () => {
               <h4>Support</h4>
               <ul>
                 <li>
-                  <a href="https://mojoauthassist.freshdesk.com/support/tickets/new">
+                  <a
+                    target="_blank"
+                    href="https://mojoauthassist.freshdesk.com/support/tickets/new"
+                  >
                     Help Center
                   </a>
                 </li>
@@ -152,7 +155,12 @@ const Footer = () => {
                   <a href="/pricing/">Pricing</a>
                 </li>
                 <li>
-                  <a href="https://angel.co/company/mojoauth/jobs">Careers</a>
+                  <a
+                    target="_blank"
+                    href="https://angel.co/company/mojoauth/jobs"
+                  >
+                    Careers
+                  </a>
                 </li>
               </ul>
             </div>
