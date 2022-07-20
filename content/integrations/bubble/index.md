@@ -80,6 +80,8 @@ Scale your login form to desired height and width and select your authentication
 </div>
 <br/>
 
+> Note:- To use Phone OTP as your authnetication method, Turn on the Twilio integration from the MojoAuth dashboard. Refer [this](/howto/add-sms-authentication) document for more details.
+
 ### Protected Page
 
 Create a new page called the **Protected** page.
