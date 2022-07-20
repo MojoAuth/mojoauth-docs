@@ -187,16 +187,17 @@ export default class Header extends Component {
                       <input type="checkbox" class="dd-input" id="resources" />
                       <ul class="dd-menu">
                         <li>
-                          <a href="/news/">News</a>
+                          <a href="/docs/api/">API Documentation</a>
                         </li>
                         <li>
-                          <a href="/docs/api/">API Documentation</a>
+                          <a href="/blog/">Blog</a>
                         </li>
                         <li>
                           <a href="/integrations/">Integrations</a>
                         </li>
+
                         <li>
-                          <a href="/blog/">Blog</a>
+                          <a href="/news/">Passwordless News</a>
                         </li>
                       </ul>
                     </label>
