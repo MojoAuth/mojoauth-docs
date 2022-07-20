@@ -57,6 +57,8 @@ export default class Header extends Component {
         ).checked
           ? false
           : document.getElementById("products").checked
+      } else {
+        document.getElementById("resources").checked = false
       }
     })
     window.addEventListener("click", function (e) {
@@ -66,6 +68,8 @@ export default class Header extends Component {
         ).checked
           ? false
           : document.getElementById("resources").checked
+      } else {
+        document.getElementById("products").checked = false
       }
     })
   }
