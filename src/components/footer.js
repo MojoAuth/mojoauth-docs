@@ -134,7 +134,10 @@ const Footer = () => {
                   <a href="/integrations/">Integrations</a>
                 </li>
                 <li>
-                  <a href="/blog/">Blogs</a>
+                  <a href="/blog/">Blog</a>
+                </li>
+                <li>
+                  <a href="/news/">Passwordless News</a>
                 </li>
               </ul>
 
