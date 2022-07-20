@@ -59,6 +59,15 @@ export default class Header extends Component {
           : document.getElementById("products").checked
       }
     })
+    window.addEventListener("click", function (e) {
+      if (!document.getElementById("resources-dropdown").contains(e.target)) {
+        document.getElementById("resources").checked = document.getElementById(
+          "resources"
+        ).checked
+          ? false
+          : document.getElementById("resources").checked
+      }
+    })
   }
 
   componentWillUnmount() {
@@ -70,6 +79,15 @@ export default class Header extends Component {
         ).checked
           ? false
           : document.getElementById("products").checked
+      }
+    })
+    window.removeEventListener("click", function (e) {
+      if (!document.getElementById("resources-dropdown").contains(e.target)) {
+        document.getElementById("resources").checked = document.getElementById(
+          "resources"
+        ).checked
+          ? false
+          : document.getElementById("resources").checked
       }
     })
   }
@@ -139,6 +157,9 @@ export default class Header extends Component {
                           </a>
                         </li>
                         <li>
+                          <a href="/products/private-cloud/">Private Cloud</a>
+                        </li>
+                        <li>
                           <a href="javascript: void(0)">
                             Web3 Login<span>Coming Soon</span>
                           </a>
@@ -153,44 +174,31 @@ export default class Header extends Component {
                             Single Sign-On<span>Coming Soon</span>
                           </a>
                         </li>
+                      </ul>
+                    </label>
+                  </li>
+                  <li id="resources-dropdown">
+                    <label class="dropdown">
+                      <div class="dd-button">Resources</div>
+                      <input type="checkbox" class="dd-input" id="resources" />
+                      <ul class="dd-menu">
                         <li>
-                          <a href="mailto:connect@mojoauth.com">
-                            Private Cloud
-                            <span class="primary">
-                              Contact Sales{" "}
-                              <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 25 25"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M7.08203 17.6113L17.082 7.61133"
-                                  stroke="white"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M7.08203 7.61133H17.082V17.6113"
-                                  stroke="white"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </span>
-                          </a>
+                          <a href="/news/">News</a>
+                        </li>
+                        <li>
+                          <a href="/docs/api/">API Documentation</a>
+                        </li>
+                        <li>
+                          <a href="/integrations/">Integrations</a>
+                        </li>
+                        <li>
+                          <a href="/blog/">Blog</a>
                         </li>
                       </ul>
                     </label>
                   </li>
                   <li>
                     <a href="/docs/">Docs</a>
-                  </li>
-                  <li>
-                    <a href="/blog/">Blog</a>
                   </li>
                   <li>
                     <a class="" href="/pricing">
