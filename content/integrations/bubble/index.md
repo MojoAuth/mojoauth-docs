@@ -73,6 +73,15 @@ Drag and add the login form to your index page. A login form would be visible as
 </div>
 <br/>
 
+Scale your login form to desired height and width and select your authentication method from the box.
+
+<div style="text-align:center">
+  <img src="/images/method-select.png" alt="Mojoauth Form Preview" />
+</div>
+<br/>
+
+> Note:- To use Phone OTP as your authnetication method, Turn on the Twilio integration from the MojoAuth dashboard. Refer [this](/howto/add-sms-authentication) document for more details.
+
 ### Protected Page
 
 Create a new page called the **Protected** page.
